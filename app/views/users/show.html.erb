@@ -1,19 +1,27 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3 col-xs-offset-2 col-sm-offset-5">
+         <h1 id="notice" class="display-3"><%= notice %></h1>
+           <p>
+             <strong>First name:</strong>
+             <%= @user.first_name %>
+           </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+           <p>
+             <strong>Last name:</strong>
+             <%= @user.last_name %>
+           </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+           <p>
+             <strong>Email:</strong>
+             <%= @user.email %>
+           </p>
+
+           <%= link_to 'Edit', edit_user_path(@user) %> |
+           <%= link_to 'Back', users_path %>
+
+        </div>
+     </div>
+ </div>
