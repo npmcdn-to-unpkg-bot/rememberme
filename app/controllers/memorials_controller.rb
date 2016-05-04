@@ -1,5 +1,6 @@
 class MemorialsController < ApplicationController
    def show
+      @memorial = Memorial.find(params[:id])
    end
 
    def new
@@ -13,12 +14,6 @@ class MemorialsController < ApplicationController
 
    private
    def memorial_params
-      params.require(:memorial).permit(:first_name, :last_name)
+      params.require(:memorial).permit(:first_name, :last_name, :dob, :dod)
    end
-
-   # def full_name
-   #    first = params(:first_name)
-   #    last = params(:last_name)
-   #    full = "#{first} #{last}"
-   # end
 end

@@ -7,6 +7,14 @@
      <%= f.label :last_name %><br>
      <%= f.text_field :last_name %>
    </div>
+   <div class="field">
+      <%= f.label :dob, "Date of Birth" %> <br>
+      <%= f.date_select :dob, options = {start_year: 1500} %>
+   </div>
+   <div class="field">
+      <%= f.label :dod, "Date of Passing" %> <br>
+      <%= f.date_select :dod, options = {start_year: 1500} %>
+   </div>
    <div class="actions">
      <%= f.submit %>
    </div>
