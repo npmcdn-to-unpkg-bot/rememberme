@@ -1,12 +1,14 @@
 class DeceasedsController < ApplicationController
+   def show
+   end
+
    def new
-      
+      @deceased = Deceased.new
    end
 
    def create
-       @user = User.find(params[:user_id])
-       @deceased = @user.deceaseds.create(deceased_params)
-       redirect_to user_path(@user)
+      @deceased = current_user.deceaseds.create(deceased_params)
+      redirect_to show_memorial_path
    end
 
    private
