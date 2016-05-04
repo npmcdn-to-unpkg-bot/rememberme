@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-   has_many :deceaseds
+   has_many :memorials
 
   has_secure_password
 

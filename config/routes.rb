@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :deceaseds, except: [:new]
-  get '/memorial/new', to: 'deceaseds#new', as: 'new_memorial'
-  get '/memorial/show', to: 'deceaseds#show', as: 'show_memorial'
+  resources :memorials
 
 
 
