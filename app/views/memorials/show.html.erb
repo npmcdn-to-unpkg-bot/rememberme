@@ -1,4 +1,6 @@
 <div id="tombstone">
-   <h1 id="tombstone_name"><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>
-   <h2 id="tombstone_dates"><%= "#{@memorial.dob} - #{@memorial.dod}" %></h2>
+   <div id="tombstone_epitaph">
+      <h1 id="tombstone_name"><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>
+      <h2 id="tombstone_dates" title="<%= "#{@memorial.dob.to_formatted_s(:long_ordinal)} - #{@memorial.dod.to_formatted_s(:long_ordinal)}" %>"><%= "#{@memorial.dob.year} - #{@memorial.dod.year}" %></h2>
+   </div>
 </div>
