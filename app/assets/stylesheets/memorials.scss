@@ -7,6 +7,13 @@
    min-height: 100%;
    text-align: center;
    min-width: 100%;
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
 }
 
 #tombstone_dates {
@@ -14,7 +21,6 @@
 }
 
 #tombstone_epitaph {
-   
 }
 
 #tombstone_name {
