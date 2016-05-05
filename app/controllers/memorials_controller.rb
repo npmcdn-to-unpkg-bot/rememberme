@@ -13,9 +13,20 @@ class MemorialsController < ApplicationController
       @memorial = Memorial.new
    end
 
+   def edit
+   end
+
    def create
       @memorial = current_user.memorials.create(memorial_params)
       redirect_to memorial_path(@memorial)
+   end
+
+   def update
+   end
+
+   def destroy
+      @memorial.destroy
+      redirect_to root_url
    end
 
    private
