@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-   has_many :memorials
+ has_many :memorials
+ has_many :posts, as: :postable
 
   has_secure_password
 

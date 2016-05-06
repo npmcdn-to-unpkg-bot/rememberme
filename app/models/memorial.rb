@@ -7,6 +7,8 @@ class Memorial < ActiveRecord::Base
 
 
    belongs_to :user
+   has_many :posts, as: :postable
+
 
    validates :first_name,
             presence: true
@@ -16,6 +18,7 @@ class Memorial < ActiveRecord::Base
             presence: true
    validates :dod,
             presence: true
+
 
    def full_name
       "#{first_name} #{last_name}"
