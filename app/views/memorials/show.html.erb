@@ -4,3 +4,8 @@
       <h2 id="tombstone_dates" title="<%= "#{@memorial.dob.to_formatted_s(:long_ordinal)} - #{@memorial.dod.to_formatted_s(:long_ordinal)}" %>"><%= "#{@memorial.dob.year} - #{@memorial.dod.year}" %></h2>
    </div>
 </div>
+
+<% form_for [@postable, Post.new] do |f| %>
+   <p><%= f.text_area :body %></p><br>
+   <p><%= f.submit "Submit" %></p>
+<% end %>
