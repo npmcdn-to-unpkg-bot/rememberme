@@ -9,15 +9,15 @@ class PostsController < ApplicationController
   end
 
   def create
-  @postable = find_postable
-  @post = @postable.posts.build(params[:post])
-  if @post.save
-    flash[:notice] = "Successfully created post."
-    redirect_to :id => nil
-  else
-    render :action => 'new'
+     @postable = find_postable
+     @post = @postable.posts.build(params[:post])
+     if @post.save
+       flash[:notice] = "Successfully created post."
+       redirect_to :id => nil
+     else
+       render :action => 'new'
+     end
   end
-end
 
   private
   def find_postable
