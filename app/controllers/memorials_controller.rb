@@ -1,12 +1,11 @@
 class MemorialsController < ApplicationController
    def index
       @memorials = Memorial.where("LOWER(first_name) like :q OR LOWER(last_name) like :q" , q: "%#{params[:query]}%")
-      p @memorials
-      p @memorials.count
    end
 
    def show
       @memorial = Memorial.friendly.find(params[:id])
+      @post = @memorial.posts.build 
    end
 
    def new
