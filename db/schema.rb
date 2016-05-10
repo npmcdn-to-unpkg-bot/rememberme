@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160506021211) do
+ActiveRecord::Schema.define(version: 20160510035701) do
 
   create_table "memorials", force: :cascade do |t|
     t.string  "first_name"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20160506021211) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.text     "body"
     t.integer  "postable_id"
     t.string   "postable_type"
     t.datetime "created_at",    null: false
