@@ -9,11 +9,13 @@ class PostsController < ApplicationController
   end
 
   def create
-     @postable = find_postable
-     @post = @postable.posts.build(params[post_params])
+   #   @postable = find_postable
+   #   @post = @postable.posts.build(post_params)
+   @memorial = Memorial.friendly.find(params[:memorial_id])
+   @post = @memorial.posts.build(post_params)
      if @post.save
        flash[:notice] = "Successfully created post."
-       redirect_to :id => nil
+       redirect_to :back
      else
        render :action => 'new'
      end
@@ -21,7 +23,7 @@ class PostsController < ApplicationController
 
   private
   def find_postable
-     params.each do |name, value|
+     params.require(:post).each do |name, value|
        if name =~ /(.+)_id$/
          return $1.classify.constantize.friendly.find(value)
        end
@@ -30,6 +32,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-     params.require(:post).permit(:body)
+     params.require(:post).permit(:postable, text_attributes: [:body])
   end
 end

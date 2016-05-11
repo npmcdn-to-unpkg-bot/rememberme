@@ -6,8 +6,10 @@
 </div>
 
 <div>
-   <%= form_for [@memorial, @text] do |f| %>
-      <p><%= f.text_area :body %></p><br>
+   <%= form_for [@memorial, @post] do |f| %>
+      <%= fields_for :text do |ff| %>
+         <p><%= ff.text_area :body %></p><br>
+      <% end %>
       <p><%= f.submit "Submit" %></p>
    <% end %>
 </div>
