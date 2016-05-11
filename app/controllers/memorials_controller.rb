@@ -5,7 +5,7 @@ class MemorialsController < ApplicationController
 
    def show
       @memorial = Memorial.friendly.find(params[:id])
-      @post = @memorial.posts.build 
+      @post = @memorial.texts.build
    end
 
    def new
