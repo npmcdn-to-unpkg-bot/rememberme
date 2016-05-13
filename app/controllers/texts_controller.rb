@@ -4,8 +4,9 @@ class TextsController < ApplicationController
    end
 
    def create
-      if Text.create(text_params)
-         flash[:success] = "Yay"
+      @text = Text.new(text_params)
+      if @text.save
+         post = Post.create(memorial_id: params_memorial[:memorial_id], postable_type: "Text", postable_id: @text.id)
       else
          flash[:alert] = "Nay"
       end
@@ -13,8 +14,11 @@ class TextsController < ApplicationController
    end
 
    private
+      def text_params
+         params.require(:text).permit(:body, posts_attributes: [:postable_type])
+      end
 
-   def text_params
-      params.require(:text).permit(:body, posts_attributes: [:postable_type])
-   end
+      def params_memorial
+         params.require(:text).permit([:memorial_id])
+      end
 end
