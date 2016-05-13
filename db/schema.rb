@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510224026) do
+ActiveRecord::Schema.define(version: 20160512022702) do
 
   create_table "memorials", force: :cascade do |t|
     t.string  "first_name"
