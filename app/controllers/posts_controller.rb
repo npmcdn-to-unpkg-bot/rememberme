@@ -9,8 +9,6 @@ class PostsController < ApplicationController
   end
 
   def create
-   #   @postable = find_postable
-   #   @post = @postable.posts.build(post_params)
    @memorial = Memorial.friendly.find(params[:memorial_id])
    @post = @memorial.posts.build(post_params)
      if @post.save

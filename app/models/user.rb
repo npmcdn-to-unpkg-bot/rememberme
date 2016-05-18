@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
  has_many :memorials
- has_many :posts, as: :postable
+ has_many :posts, dependent: :destroy 
 
   has_secure_password
 

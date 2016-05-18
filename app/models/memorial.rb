@@ -8,7 +8,6 @@ class Memorial < ActiveRecord::Base
 
    belongs_to :user
    has_many :posts, dependent: :destroy
-   # has_many :texts, through: :posts
 
 
    validates :first_name,

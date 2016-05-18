@@ -6,7 +6,7 @@ class TextsController < ApplicationController
    def create
       @text = Text.new(text_params)
       if @text.save
-         post = Post.create(memorial_id: params_memorial[:memorial_id], postable_type: "Text", postable_id: @text.id)
+         post = Post.create(memorial_id: params_memorial[:memorial_id], user_id: current_user.id, postable_type: "Text", postable_id: @text.id)
       else
          flash[:alert] = "Nay"
       end
@@ -21,4 +21,8 @@ class TextsController < ApplicationController
       def params_memorial
          params.require(:text).permit([:memorial_id])
       end
+
+      # def params_user
+      #    params.require(:text).permit([:user_id])
+      # end
 end
