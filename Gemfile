@@ -11,6 +11,8 @@ gem 'carrierwave'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'friendly_id', '~> 5.1.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
