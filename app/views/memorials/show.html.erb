@@ -7,21 +7,18 @@
 
 <div
 
+<div class="container">
+   <div class="row">
+      <div class="well col-xs-12 col-sm-6 col-md-4">
+         <%= form_for :text, url: texts_path do |f| %>
+            <p><%= f.text_area :body %></p><br>
+            <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
+            <p><%= f.submit "Submit" %></p>
+         <% end %>
+      </div>
 
-   <div>
-      <%= form_for :text, url: texts_path do |f| %>
-         <p><%= f.text_area :body %></p><br>
-         <!-- <%= f.fields_for :posts do |ff| %> -->
-            <!-- <p><%= ff.hidden_field :postable_type, value: "Text" %></p><br> -->
-         <!-- <% end %> -->
-         <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
-         <p><%= f.submit "Submit" %></p>
+      <% @memorial.posts.each do |s| %>
+         <div class="well col-xs-12 col-sm-6 col-md-4"><%= s.postable.try(:body) %></div>
       <% end %>
    </div>
-
-
-   <% @memorial.posts.each do |s| %>
-      <div class="card"><%= s.postable.try(:body) %></div>
-   <% end %>
-
-   <div class="well">...</div>
+</div>
