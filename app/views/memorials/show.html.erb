@@ -9,6 +9,7 @@
 
 <div class="container">
    <div class="row">
+
       <div class="well col-xs-12 col-sm-6 col-md-4">
          <%= form_for :text, url: texts_path do |f| %>
             <p><%= f.text_area :body %></p><br>
@@ -17,8 +18,23 @@
          <% end %>
       </div>
 
+      <div class="well col-xs-12 col-sm-6 col-md-4">
+         <%= form_for Picture.new do |f| %>
+               <p><%= f.file_field :image %></p>
+               <p><%= f.submit "Submit" %></p>
+         <% end %>
+      </div>
+
+      <% @pictures.each do |picture| %>
+         <div class="well col-xs-12 col-sm-6 col-md-4">
+            <%= image_tag picture.image.methods %>
+         </div>
+      <% end %>
+
       <% @memorial.posts.each do |s| %>
          <div class="well col-xs-12 col-sm-6 col-md-4"><%= s.postable.try(:body) %></div>
       <% end %>
+
+
    </div>
 </div>

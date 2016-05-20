@@ -6,6 +6,7 @@ class MemorialsController < ApplicationController
    def show
       @memorial = Memorial.friendly.find(params[:id])
       @post = @memorial.posts.build
+      @pictures = Picture.all
    end
 
    def new

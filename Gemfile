@@ -13,6 +13,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
+gem "fog-aws"
+
 gem 'friendly_id', '~> 5.1.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
