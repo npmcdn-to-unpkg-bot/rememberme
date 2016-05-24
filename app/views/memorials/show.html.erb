@@ -21,18 +21,19 @@
       <div class="well col-xs-12 col-sm-6 col-md-4">
          <%= form_for Picture.new do |f| %>
                <p><%= f.file_field :image %></p>
+               <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
                <p><%= f.submit "Submit" %></p>
          <% end %>
       </div>
 
-      <% @pictures.each do |picture| %>
-         <div class="well col-xs-12 col-sm-6 col-md-4">
-            <%= image_tag picture.image.methods %>
-         </div>
-      <% end %>
-
       <% @memorial.posts.each do |s| %>
-         <div class="well col-xs-12 col-sm-6 col-md-4"><%= s.postable.try(:body) %></div>
+         <div class="well col-xs-12 col-sm-6 col-md-4">
+            <% if postable_type = "Text" %>
+               <%= s.postable.try(:body) %>
+            <% else %>
+               <%= image_tag s.postable.url %>
+            <% end %>
+         </div>
       <% end %>
 
 

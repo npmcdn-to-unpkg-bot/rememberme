@@ -15,14 +15,10 @@ class TextsController < ApplicationController
 
    private
       def text_params
-         params.require(:text).permit(:body, posts_attributes: [:postable_type])
+         params.require(:text).permit(:body)
       end
 
       def params_memorial
          params.require(:text).permit([:memorial_id])
       end
-
-      # def params_user
-      #    params.require(:text).permit([:user_id])
-      # end
 end
