@@ -26,15 +26,16 @@
          <% end %>
       </div>
 
-      <% @memorial.posts.each do |s| %>
+      <% @memorial.posts.each do |post| %>
          <div class="well col-xs-12 col-sm-6 col-md-4">
-            <% if postable_type = "Text" %>
-               <%= s.postable.try(:body) %>
-            <% else %>
-               <%= image_tag s.postable.url %>
+            <% if post.postable_type == "Text" %>
+               <%= post.postable.try(:body) %>
+            <% elsif post.postable_type == "Picture" %>
+               <%= image_tag post.postable.image.url %>
             <% end %>
          </div>
       <% end %>
+
 
 
    </div>
