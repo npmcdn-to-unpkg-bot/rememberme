@@ -2,28 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-#tombstone {
-   // position: absolute;
-   min-height: 100%;
+.tombstone {
+   align-items: center;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+   height: 100%;
+   justify-content: center;
+   -ms-flex-align: center;
    text-align: center;
-   min-width: 100%;
-
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
+   -webkit-align-items: center;
+   -webkit-box-align: center;
 }
 
-#tombstone_dates {
-   font-size: 60px;
-}
-
-#tombstone_epitaph {
-}
-
-#tombstone_name {
+.tombstone h1 {
    font-size: 100px;
+}
+
+.tombstone h2 {
+   font-size: 60px;
 }
