@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.pictures-form {
+   display: none;
+}
 .posts {
    padding-top: 10px;
 }
@@ -23,6 +26,10 @@
 .posts-forms button {
    margin-left: 5px;
    margin-right: 5px;
+}
+
+.texts-form {
+   display: none;
 }
 
 .tombstone {
