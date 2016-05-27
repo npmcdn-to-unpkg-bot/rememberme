@@ -1,6 +1,6 @@
 class MemorialsController < ApplicationController
    def index
-      @memorials = Memorial.where("LOWER(first_name) like :q OR LOWER(last_name) like :q" , q: "%#{params[:query]}%")
+      @memorials = Memorial.where("LOWER(first_name) like :q OR LOWER(last_name) like :q" , q: "%#{params[:query].downcase}%")
    end
 
    def show
