@@ -23,13 +23,25 @@
 
    <div class="posts row">
       <% @memorial.posts.each do |post| %>
-      <% if post.postable_type == "Text" %>
-         <div class="col-xs-12 col-sm-6 col-md-4 well">
-               <%= post.postable.try(:body) %>
-            <% elsif post.postable_type == "Picture" %>
-               <%= image_tag post.postable.image.url %>
-            <% end %>
-         </div>
+         <% if post.postable_type == "Text" %>
+            <div class="col-xs-12 col-sm-6 col-md-4 post">
+               <div class="panel panel-default">
+                 <div class="panel-body">
+                   <%= post.postable.try(:body) %>
+                 </div>
+                 <div class="panel-footer"><%= post.user_id %></div>
+               </div>
+            </div>
+         <% elsif post.postable_type == "Picture" %>
+            <div class="col-xs-12 col-sm-6 col-md-4 post">
+               <div class="panel panel-default">
+                 <div class="panel-body">
+                   <%= image_tag post.postable.image.url %>
+                 </div>
+                 <div class="panel-footer">Panel footer</div>
+               </div>
+            </div>
+         <% end %>
       <% end %>
    </div>
 
