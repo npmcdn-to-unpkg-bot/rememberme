@@ -29,7 +29,7 @@
                  <div class="panel-body">
                    <%= post.postable.try(:body) %>
                  </div>
-                 <div class="panel-footer"><%= post.user_id %></div>
+                 <div class="panel-footer">Shared by: <%= post.user %></div>
                </div>
             </div>
          <% elsif post.postable_type == "Picture" %>
@@ -38,7 +38,7 @@
                  <div class="panel-body">
                    <%= image_tag post.postable.image.url %>
                  </div>
-                 <div class="panel-footer">Panel footer</div>
+                 <div class="panel-footer">Shared by: <%= post.user %></div>
                </div>
             </div>
          <% end %>
