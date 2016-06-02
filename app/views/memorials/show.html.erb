@@ -1,6 +1,10 @@
 
 <div class="container">
-
+   <% @memorial.posts.each do |post| %>
+      <% if post.postable_type == "Picture" %>
+            <%= image_tag post.postable.image.url, :class => "tombstone-image"%>
+      <% end %>
+   <% end %>
    <div class="row tombstone">
       <div class="col-xs-12">
          <h1><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>

@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .panel-body {
+   font-size: 20px;
    min-height: 360px;
 }
 
@@ -64,3 +65,38 @@
 .tombstone h2 {
    font-size: 60px;
 }
+
+.tombstone-image {
+   display: none;
+   position: absolute;
+}
+
+// @include media-breakpoint-up(sm) {
+//    .tombstone h1 {
+//       font-size: 10px;
+//    }
+//
+//    .tombstone h2 {
+//       font-size: 6px;
+//    }
+// }
+//
+// @include media-breakpoint-up(md) {
+//    .tombstone h1 {
+//       font-size: 50px;
+//    }
+//
+//    .tombstone h2 {
+//       font-size: 30px;
+//    }
+// }
+//
+// @include media-breakpoint-up(lg) {
+//    .tombstone h1 {
+//       font-size: 100px;
+//    }
+//
+//    .tombstone h2 {
+//       font-size: 60px;
+//    }
+// }
