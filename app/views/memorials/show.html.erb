@@ -9,7 +9,7 @@
       <% end %>
    <% end %> -->
 
-   <div class="row tombstone" style="background-image: url(<%= @pics.first.image.url %>)">
+   <div class="row tombstone">
       <div class="col-xs-12">
          <h1><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>
          <h2 title="<%= "#{@memorial.dob.to_formatted_s(:long_ordinal)} - #{@memorial.dod.to_formatted_s(:long_ordinal)}" %>"><%= "#{@memorial.dob.year} - #{@memorial.dod.year}" %></h2>
@@ -94,13 +94,19 @@
 </div>
 
 <script>
-   var pictureUrl = [
-      <% @pics.each do |pic| %>
-         <% if pic == @pics.last %>
-            <%= "#{pic.image.url}" %>
-         <% else %>
-            <%= "#{pic.image.url}," %>
+
+   $(document).ready(function() {
+      var pictureUrl = [
+         <% @pics.each do |pic| %>
+            <% if pic == @pics.last %>
+               "<%= pic.image.url %>"
+            <% else %>
+               "<%= pic.image.url %>",
+            <% end %>
          <% end %>
-      <% end %>
-   ]
+      ]
+   });
+
+   $(".tombstone").css("background-image": pictureUrl[0])
+
 </script>
