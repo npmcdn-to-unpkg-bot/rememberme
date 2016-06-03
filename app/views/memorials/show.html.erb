@@ -8,7 +8,7 @@
       <% end %>
    <% end %> -->
    <% @pics.each do |pic| %>
-      <% if pic.image.first %>
+      <% if pic.image.url.first %>
          <%= image_tag pic.image.url, :class => "tombstone-image"%>
       <% end %>
          <!-- <%= image_tag pic.image.url, :class => "tombstone-image"%> -->
