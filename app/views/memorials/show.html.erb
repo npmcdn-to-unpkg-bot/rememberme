@@ -2,7 +2,7 @@
 <div class="container">
 
    <% @pics.each do |pic| %>
-      <% if pic.image.first %>
+      <% if pic == @pic.first %>
          <%= image_tag pic.image.url, :class => "tombstone-image"%>
       <% end %>
    <% end %>
