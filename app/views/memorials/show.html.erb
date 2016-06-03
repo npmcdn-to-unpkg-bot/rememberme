@@ -92,3 +92,15 @@
    </div>
 
 </div>
+
+<script>
+   var pictureUrl = [
+      <% @pics.each do |pic| %>
+         <% if pic == @pics.last %>
+            <%= "#{pic.image.url}" %>
+         <% else %>
+            <%= "#{pic.image.url}," %>
+         <% end %>
+      <% end %>
+   ]
+</script>
