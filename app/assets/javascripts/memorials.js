@@ -22,6 +22,29 @@ var main = function() {
       $('.pictures-form').css("display", "block");
    });
 
+   var active = $(".active-slide");
+   var next = $(".active-slide").prev();
+      $(".active-slide").animate({"opacity": ".6"}, 2000);
+      setTimeout(function() {
+         $(".activeSlide").animate({"opacity": "0"}, 1000);
+         active.removeClass(".active-slide");
+         next.addClass(".active-slide");
+      }, 4000);
+      setInterval(function() {
+         var active = $(".active-slide");
+         var next = $(".active-slide").prev();
+            if (next.length === 0) {
+               next = $(".first-slide");
+            }
+               $(".active-slide").animate({"opacity": ".6"}, 1000);
+                  setTimeout(function() {
+                     $(".active-slide").animate({"opacity": "0"}, 1000);
+                           active.removeClass(".active-slide");
+                           next.addClass(".active-slide");
+                  }, 4000);
+      }, 5100);
+
+
 
 
 }

@@ -3,9 +3,9 @@
 
    <% @pics.each do |pic| %>
       <% if pic == @pics.first %>
-         <%= image_tag pic.image.url, :class => "active tombstone-image"%>
+         <%= image_tag pic.image.url, :class => "active-slide first-slide tombstone-slide"%>
       <% else %>
-         <%= image_tag pic.image.url, :class => "tombstone-image"%>
+         <%= image_tag pic.image.url, :class => "tombstone-slide"%>
       <% end %>
    <% end %>
 
