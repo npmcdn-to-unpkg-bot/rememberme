@@ -8,7 +8,10 @@
       <% end %>
    <% end %> -->
    <% @pics.each do |pic| %>
-      <%= image_tag pic.image.url, :class => "tombstone-image"%>
+      <% if pic.first %>
+         <%= image_tag pic.image.url, :class => "tombstone-image"%>
+      <% end %>
+         <!-- <%= image_tag pic.image.url, :class => "tombstone-image"%> -->
    <% end %>
    <div class="row tombstone">
       <div class="col-xs-12">
