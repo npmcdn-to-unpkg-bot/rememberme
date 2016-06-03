@@ -26,7 +26,7 @@ var main = function() {
    var next = $(".active-slide").prev();
       $(".active-slide").animate({"opacity": ".6"}, 2000);
       setTimeout(function() {
-         $(".activeSlide").animate({"opacity": "0"}, 1000);
+         $(".active-slide").animate({"opacity": "0"}, 1000);
          active.removeClass(".active-slide");
          next.addClass(".active-slide");
       }, 4000);
