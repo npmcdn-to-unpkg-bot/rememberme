@@ -1,15 +1,15 @@
 
 <div class="container">
 
-   <% @pics.each do |pic| %>
+   <!-- <% @pics.each do |pic| %>
       <% if pic == @pics.last %>
          <%= image_tag pic.image.url, :class => "active-slide first-slide tombstone-slide"%>
       <% else %>
          <%= image_tag pic.image.url, :class => "tombstone-slide"%>
       <% end %>
-   <% end %>
+   <% end %> -->
 
-   <div class="row tombstone">
+   <div class="row tombstone" style="background-image: <%= @pics.first.image.url %>">
       <div class="col-xs-12">
          <h1><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>
          <h2 title="<%= "#{@memorial.dob.to_formatted_s(:long_ordinal)} - #{@memorial.dod.to_formatted_s(:long_ordinal)}" %>"><%= "#{@memorial.dob.year} - #{@memorial.dod.year}" %></h2>
