@@ -2,7 +2,7 @@
 <div class="container">
 
    <% @pics.each do |pic| %>
-      <% if pic == @pics.first %>
+      <% if pic == @pics.last %>
          <%= image_tag pic.image.url, :class => "active-slide first-slide tombstone-slide"%>
       <% else %>
          <%= image_tag pic.image.url, :class => "tombstone-slide"%>
