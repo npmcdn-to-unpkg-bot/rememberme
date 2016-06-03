@@ -27,8 +27,8 @@ var main = function() {
       $(".active-slide").animate({"opacity": ".6"}, 2000);
       setTimeout(function() {
          $(".active-slide").animate({"opacity": "0"}, 1000);
-         active.removeClass(".active-slide");
-         next.addClass(".active-slide");
+         active.removeClass("active-slide");
+         next.addClass("active-slide");
       }, 4000);
       setInterval(function() {
          var active = $(".active-slide");
@@ -39,8 +39,8 @@ var main = function() {
                $(".active-slide").animate({"opacity": ".6"}, 1000);
                   setTimeout(function() {
                      $(".active-slide").animate({"opacity": "0"}, 1000);
-                           active.removeClass(".active-slide");
-                           next.addClass(".active-slide");
+                           active.removeClass("active-slide");
+                           next.addClass("active-slide");
                   }, 4000);
       }, 5100);
 
