@@ -1,17 +1,12 @@
 
 <div class="container">
-   <!-- <% pics = Array.new %>
-   <% @memorial.posts.each do |post| %>
-      <% if post.postable_type == "Picture" %>
-         <% pics << post.postable.image.url %>
-            <%= image_tag post.postable.image.url, :class => "tombstone-image"%>
-      <% end %>
-   <% end %> -->
+
    <% @pics.each do |pic| %>
-      <% if pic.image.url.first %>
+      <% if pic.image.first %>
          <%= image_tag pic.image.url, :class => "tombstone-image"%>
       <% end %>
    <% end %>
+
    <div class="row tombstone">
       <div class="col-xs-12">
          <h1><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>
