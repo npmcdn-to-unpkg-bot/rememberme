@@ -10,14 +10,7 @@ class Memorial < ActiveRecord::Base
    has_many :posts, dependent: :destroy
 
 
-   validates :first_name,
-            presence: true
-   validates :last_name,
-            presence: true
-   validates :dob,
-            presence: true
-   validates :dod,
-            presence: true
+   validates :first_name, :last_name, :dob, :dod, presence: true 
 
 
    def full_name

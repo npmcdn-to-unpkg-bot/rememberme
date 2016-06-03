@@ -1,14 +1,14 @@
 
 <div class="container">
-   <% pics = Array.new %>
+   <!-- <% pics = Array.new %>
    <% @memorial.posts.each do |post| %>
       <% if post.postable_type == "Picture" %>
          <% pics << post.postable.image.url %>
-            <!-- <%= image_tag post.postable.image.url, :class => "tombstone-image"%> -->
+            <%= image_tag post.postable.image.url, :class => "tombstone-image"%>
       <% end %>
-   <% end %>
-   <% pics.each do |pic| %>
-      <%= image_tag pic, :class => "tombstone-image"%>
+   <% end %> -->
+   <% @pics.each do |pic| %>
+      <%= image_tag pic.image.url, :class => "tombstone-image"%>
    <% end %>
    <div class="row tombstone">
       <div class="col-xs-12">

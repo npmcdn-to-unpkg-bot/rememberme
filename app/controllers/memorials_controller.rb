@@ -6,8 +6,9 @@ class MemorialsController < ApplicationController
    def show
       @memorial = Memorial.friendly.find(params[:id])
       @post = @memorial.posts.build
+      @pics = @memorial.posts.where(postable_type: "Picture").collect(&:postable)
    end
-
+   
    def new
       @memorial = Memorial.new
    end
