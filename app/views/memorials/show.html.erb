@@ -94,7 +94,7 @@
 
 </div>
 
-<!-- <script>
+<script>
 
    $(document).ready(function() {
       var pictureUrl = [
@@ -107,25 +107,9 @@
          <% end %>
       ];
 
-      $(".tombstone").css("background-image", pictureUrl[0]);
+      // console.log(pictureUrl[0]);
+      $(".tombstone").css("background-image", "url(" + pictureUrl[0] + ")");
 
    });
-
-</script> -->
-
-<script>
-
-
-      var pictureUrl = [
-         <% @pics.each do |pic| %>
-            <% if pic == @pics.last %>
-               "<%= pic.image.url %>"
-            <% else %>
-               "<%= pic.image.url %>",
-            <% end %>
-         <% end %>
-      ];
-
-      $(".tombstone").css("background-image", pictureUrl[0]);
 
 </script>
