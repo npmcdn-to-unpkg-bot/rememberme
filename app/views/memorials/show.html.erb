@@ -1,6 +1,7 @@
 
 <div class="container">
 
+
    <!-- <% @pics.each do |pic| %>
       <% if pic == @pics.last %>
          <%= image_tag pic.image.url, :class => "active-slide first-slide tombstone-slide"%>
@@ -93,7 +94,7 @@
 
 </div>
 
-<script>
+<!-- <script>
 
    $(document).ready(function() {
       var pictureUrl = [
@@ -109,5 +110,22 @@
       $(".tombstone").css("background-image", pictureUrl[0]);
 
    });
+
+</script> -->
+
+<script>
+
+
+      var pictureUrl = [
+         <% @pics.each do |pic| %>
+            <% if pic == @pics.last %>
+               "<%= pic.image.url %>"
+            <% else %>
+               "<%= pic.image.url %>",
+            <% end %>
+         <% end %>
+      ];
+
+      $(".tombstone").css("background-image", pictureUrl[0]);
 
 </script>
