@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520010427) do
+ActiveRecord::Schema.define(version: 20160604201437) do
 
   create_table "memorials", force: :cascade do |t|
     t.string  "first_name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20160520010427) do
     t.date    "dod"
     t.integer "user_id"
     t.string  "slug"
+    t.string  "place_of_birth"
+    t.string  "place_of_death"
   end
 
   create_table "pictures", force: :cascade do |t|
