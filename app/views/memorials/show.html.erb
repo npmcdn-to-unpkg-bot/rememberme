@@ -99,9 +99,15 @@
       ];
 
       var length = pictureUrl.length
-      
-      setTimeout(function() {
-         $(".tombstone").css("background-image", "url(" + pictureUrl[0] + ")");
+      var i = length - 1
+      setInterval(function() {
+         if (i == 0) {
+            $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
+            i = length - 1
+         } else {
+            $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
+            i = i - 1
+         };
       }, 4000);
 
    });
