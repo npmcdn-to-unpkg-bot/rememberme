@@ -1,17 +1,16 @@
 
 <div class="container">
 
-   <div class="row tombstone">
+   <div class="row epitaph">
       <div class="col-xs-12">
             <h1><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>
             <h2 title="<%= "#{@memorial.dob.to_formatted_s(:long_ordinal)} - #{@memorial.dod.to_formatted_s(:long_ordinal)}" %>"><%= "#{@memorial.dob.year} - #{@memorial.dod.year}" %></h2>
       </div>
    </div>
 
-   <!-- <div class="epitaph">
-      <h1><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>
-      <h2 title="<%= "#{@memorial.dob.to_formatted_s(:long_ordinal)} - #{@memorial.dod.to_formatted_s(:long_ordinal)}" %>"><%= "#{@memorial.dob.year} - #{@memorial.dod.year}" %></h2>
-   </div> -->
+   <div class="tombstone">
+
+   </div>
 
    <div class="posts-forms row">
       <!-- Button trigger modal -->

@@ -3,9 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .epitaph {
-   position: absolute;
-   font-size: 80%;
-}
+      align-items: center;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      -ms-flex-align: center;
+      text-align: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+   }
 
 .panel-body {
    font-size: 20px;
@@ -51,27 +59,24 @@
 }
 
 .tombstone {
-   align-items: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: bottom;
-   display: -ms-flexbox;
-   display: -webkit-flex;
-   display: flex;
-   height: 100%;
-   justify-content: center;
-   -ms-flex-align: center;
-   opacity: .8;
-   text-align: center;
-   -webkit-align-items: center;
-   -webkit-box-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
-.tombstone h1 {
+.epitaph h1 {
    font-size: 100px;
 }
 
-.tombstone h2 {
+.epitaph h2 {
    font-size: 60px;
 }
 // @include media-breakpoint-up(sm) {
