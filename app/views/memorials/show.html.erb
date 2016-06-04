@@ -1,15 +1,6 @@
 
 <div class="container">
 
-
-   <!-- <% @pics.each do |pic| %>
-      <% if pic == @pics.last %>
-         <%= image_tag pic.image.url, :class => "active-slide first-slide tombstone-slide"%>
-      <% else %>
-         <%= image_tag pic.image.url, :class => "tombstone-slide"%>
-      <% end %>
-   <% end %> -->
-
    <div class="row tombstone">
       <div class="col-xs-12">
          <h1><%= "#{@memorial.first_name} #{@memorial.last_name}" %></h1>
@@ -107,8 +98,11 @@
          <% end %>
       ];
 
-      // console.log(pictureUrl[0]);
-      $(".tombstone").css("background-image", "url(" + pictureUrl[0] + ")");
+      var length = pictureUrl.length
+      
+      setTimeout(function() {
+         $(".tombstone").css("background-image", "url(" + pictureUrl[0] + ")");
+      }, 4000);
 
    });
 
