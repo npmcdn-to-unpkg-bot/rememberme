@@ -1,4 +1,4 @@
-
+<div class="container">
    <% @memorials.each do |memorial| %>
       <% @pics = [] %>
       <% memorial.posts.each do |post| %>
@@ -14,6 +14,8 @@
         </div>
         <div class="media-body">
                <h4 class="media-heading"><%= link_to "#{memorial.first_name} #{memorial.last_name}", memorial %></h4>
+               <h5 title="<%= "#{@memorial.dob.to_formatted_s(:long_ordinal)} - #{@memorial.dod.to_formatted_s(:long_ordinal)}" %>"><%= "#{@memorial.dob.year} - #{@memorial.dod.year}" %></h2>
         </div>
       </div>
    <% end %>
+</div>
