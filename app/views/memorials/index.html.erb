@@ -3,13 +3,13 @@
       <% @pics = [] %>
       <% memorial.posts.each do |post| %>
          <% if post.postable_type == "Picture" %>
-            <%      @pics <<  image_tag post.postable.image.thumb.url %>
+            <% @pics <<  post.postable.image.thumb.url %>
          <% end %>
       <% end %>
       <div class="media">
         <div class="media-left">
           <a href="#">
-            <%= @pics.first %>
+            <%= image_tag @pics.first %>
           </a>
         </div>
         <div class="media-body">
