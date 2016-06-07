@@ -3,21 +3,11 @@
       <div class="media">
         <div class="media-left">
           <a href="#">
-             <div class="posts row">
-                <% memorial.posts.each do |post| %>
-                   <% if post.postable_type == "Picture" %>
-                      <div class="col-xs-12 col-sm-6 col-md-4 post">
-                         <div class="panel panel-default">
-                           <div class="panel-body">
-                             <%= image_tag post.postable.image.feed.url %>
-                           </div>
-                           <div class="panel-footer">Shared by: <%= post.user %></div>
-                         </div>
-                      </div>
-                   <% end %>
+             <% memorial.posts.each do |post| %>
+                <% if post.postable_type == "Picture" %>
+                  <%= image_tag post.postable.image.thumb.url %>
                 <% end %>
-             </div>
-
+             <% end %>
           </a>
         </div>
         <div class="media-body">
