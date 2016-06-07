@@ -1,6 +1,7 @@
 class MemorialsController < ApplicationController
    def index
       @memorials = Memorial.where("LOWER(first_name) like :q OR LOWER(last_name) like :q" , q: "%#{params[:query].downcase}%")
+      @pics = @memorial.posts.where(postable_type: "Picture").collect(&:postable)
    end
 
    def show
