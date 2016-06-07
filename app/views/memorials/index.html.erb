@@ -5,7 +5,7 @@
           <a href="#">
                 <% memorial.posts.each do |post| %>
                    <% if post.postable_type == "Picture" %>
-                            <%= image_tag post.postable.image.feed.url %>
+                            <%= image_tag post.postable.image.thumb.first.url %>
                    <% end %>
                 <% end %>
           </a>
