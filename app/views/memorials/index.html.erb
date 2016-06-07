@@ -1,15 +1,15 @@
 
    <% @memorials.each do |memorial| %>
+      <% @pics = [] %>
+      <% memorial.posts.each do |post| %>
+         <% if post.postable_type == "Picture" %>
+            <%      @pics <<  image_tag post.postable.image.thumb.url %>
+         <% end %>
+      <% end %>
       <div class="media">
         <div class="media-left">
           <a href="#">
-            <% memorial.posts.each do |post| %>
-                <% until post.postable_type == "Picture" %>
-                   <% if post.postable_type == "Picture" %>
-                            <%= image_tag post.postable.image.thumb.url %>
-                   <% end %>
-                <% end %>
-            <% end %>
+            <%= @pics.first %>
           </a>
         </div>
         <div class="media-body">
