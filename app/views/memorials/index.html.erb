@@ -1,5 +1,6 @@
 
    <% @memorials.each do |memorial| %>
+      <% @post = @memorial.posts.build %>
       <% @pics = @memorial.posts.where(postable_type: "Picture").collect(&:postable) %>
       <div class="media">
         <div class="media-left">
