@@ -3,11 +3,11 @@
       <div class="media">
         <div class="media-left">
           <a href="#">
-             <% memorial.posts.each do |post| %>
-                <% if post.postable_type == "Picture" %>
-                  <%= image_tag post.postable.image.feed.url %>
+                <% memorial.posts.each do |post| %>
+                   <% if post.postable_type == "Picture" %>
+                            <%= image_tag post.postable.image.feed.url %>
+                   <% end %>
                 <% end %>
-             <% end %>
           </a>
         </div>
         <div class="media-body">
