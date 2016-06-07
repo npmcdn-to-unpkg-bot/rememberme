@@ -4,7 +4,7 @@
         <div class="media-left">
           <a href="#">
                 <% memorial.posts.each do |post| %>
-                   <% if post.postable_type == "Picture" %>
+                   <% if post.postable_type == "Picture" && post == post.postable.image.first %>
                             <%= image_tag post.postable.image.thumb.url %>
                    <% end %>
                 <% end %>
