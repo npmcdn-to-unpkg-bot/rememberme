@@ -10,8 +10,11 @@ class Memorial < ActiveRecord::Base
    has_many :posts, dependent: :destroy
 
 
-   validates :first_name, :last_name, :dob, :dod, presence: true 
+   validates :first_name, :last_name, :dob, :dod, presence: true
 
+   def first_thumb
+      self.posts.where(postable_type: "Picture").collect(&:postable).first.image.thumb.url
+   end
 
    def full_name
       "#{first_name} #{last_name}"
