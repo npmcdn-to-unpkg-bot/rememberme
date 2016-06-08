@@ -13,10 +13,10 @@ class Memorial < ActiveRecord::Base
    validates :first_name, :last_name, :dob, :dod, presence: true
 
    def first_thumb
-      if self.posts != Nil && self.posts.where(postable_type: "Picture").collect(&:postable).first.image != Nil
-         return self.posts.where(postable_type: "Picture").collect(&:postable).first.image.thumb.url
+      if self.posts.any? && self.posts.where(postable_type: "Picture").any?
+         self.posts.where(postable_type: "Picture").collect(&:postable).first.image.thumb.url
       else
-         return "app/assets/images/tree-of-life.jpg"
+         "tree-of-life.jpg"
       end
    end
 
