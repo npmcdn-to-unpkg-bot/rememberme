@@ -16,6 +16,14 @@
       -webkit-box-align: center;
    }
 
+   .epitaph h1 {
+      font-size: 100px;
+   }
+
+   .epitaph h2 {
+      font-size: 60px;
+   }
+
 .panel-body {
    font-size: 20px;
    min-height: 360px;
@@ -50,7 +58,7 @@
    -webkit-box-align: center;
 }
 
-.posts-forms button {
+.posts-forms .btn {
    margin-left: 5px;
    margin-right: 5px;
 }
@@ -78,13 +86,7 @@
   z-index: -1;
 }
 
-.epitaph h1 {
-   font-size: 100px;
-}
 
-.epitaph h2 {
-   font-size: 60px;
-}
 // @include media-breakpoint-up(sm) {
 //    .tombstone h1 {
 //       font-size: 10px;
