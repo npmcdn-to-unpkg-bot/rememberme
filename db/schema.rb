@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160604201437) do
+ActiveRecord::Schema.define(version: 20160608190507) do
 
   create_table "memorials", force: :cascade do |t|
     t.string  "first_name"
@@ -54,6 +54,12 @@ ActiveRecord::Schema.define(version: 20160604201437) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "video_file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
