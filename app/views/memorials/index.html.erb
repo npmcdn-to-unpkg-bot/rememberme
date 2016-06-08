@@ -3,9 +3,7 @@
       <div class="media">
         <div class="media-left">
           <a href="#">
-             <% if !memorial.first_thumb.nil? %>
-                <%= image_tag memorial.first_thumb %>
-             <% end %>
+                <%= image_tag memorial.try(:first_thumb) %>
           </a>
         </div>
         <div class="media-body">
