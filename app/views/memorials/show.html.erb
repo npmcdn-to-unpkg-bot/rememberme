@@ -54,35 +54,37 @@
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
      <div class="modal-dialog" role="document">
        <div class="modal-content">
-         <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-           <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-         </div>
-         <div class="modal-body">
 
-               <!-- <div class="col-xs-12 col-sm-6 col-md-4 well"> -->
-               <div class="texts-form">
-                  <%= form_for :text, url: texts_path do |f| %>
-                     <p><%= f.text_area :body %></p><br>
-                     <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
-                     <p><%= f.submit "Submit" %></p>
-                  <% end %>
-               </div>
+         <%= form_for :text, url: texts_path do |f| %>
+            <div class="modal-header texts-form">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Write a Message</h4>
+            </div>
+            <div class="modal-body texts-form">
+                  <p><%= f.text_area :body, class: "text-area" %></p><br>
+                  <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
+            </div>
+            <div class="modal-footer texts-form">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                 <%= f.submit "Share Message", class: "btn btn-primary"%>
+            </div>
+         <% end %>
 
-               <!-- <div class="col-xs-12 col-sm-6 col-md-4 well"> -->
-               <div class="pictures-form">
-                  <%= form_for Picture.new do |f| %>
-                        <p><%= f.file_field :image %></p>
-                        <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
-                        <p><%= f.submit "Submit" %></p>
-                  <% end %>
-               </div>
+         <%= form_for Picture.new do |f| %>
+            <div class="modal-header pictures-form">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Leave a Picture</h4>
+            </div>
+            <div class="modal-body pictures-form">
+                  <p><%= f.file_field :image %></p>
+                  <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
+            </div>
+            <div class="modal-footer pictures-form">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                 <%= f.submit "Share Picture", class: "btn btn-primary"%>
+           </div>
+        <% end %>
 
-         </div>
-         <div class="modal-footer">
-           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-           <button type="button" class="btn btn-primary">Save changes</button>
-         </div>
        </div>
      </div>
    </div>
@@ -113,7 +115,7 @@
             $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
             i = i - 1
          };
-      }, 6000);
+      }, 4000);
 
    });
 

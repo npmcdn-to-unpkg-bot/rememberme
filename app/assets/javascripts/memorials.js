@@ -2,7 +2,6 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 var main = function() {
-
    modalRefresh = function() {
       $('.texts-form').css("display", "none");
       $('.pictures-form').css("display", "none");
@@ -12,12 +11,12 @@ var main = function() {
       $(".navbar-memorial").css({"opacity": "1", "position": "fixed"});
    };
 
-   $('.texts-button').click(function() {
+   $(document).on("click", '.texts-button', function() {
       modalRefresh();
       $('.texts-form').css("display", "block");
    });
 
-   $('.pictures-button').click(function() {
+   $(document).on("click", '.pictures-button', function() {
       modalRefresh();
       $('.pictures-form').css("display", "block");
    });
