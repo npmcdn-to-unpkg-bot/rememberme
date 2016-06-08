@@ -16,7 +16,7 @@ class Memorial < ActiveRecord::Base
       if self.posts.any? && self.posts.where(postable_type: "Picture").any?
          self.posts.where(postable_type: "Picture").collect(&:postable).first.image.thumb.url
       else
-         "tree-of-life.jpg"
+         "thumb_Hydrangeas.jpg"
       end
    end
 
