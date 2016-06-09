@@ -8,6 +8,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'carrierwave'
+
+gem 'carrierwave-video'
+
+gem 'carrierwave-video-thumbnailer'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
