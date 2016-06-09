@@ -52,8 +52,8 @@
          <% elsif post.postable_type == "Video" %>
             <div class="col-xs-12 col-sm-6 col-md-4 post">
                <div class="panel panel-default">
-                  <div class="panel-body">
-                     <%= video_tag post.postable.video_file.url, controls: true, size: "300" %>
+                  <div id="videos-thumbnail" class="panel-body">
+                        <%= video_tag post.postable.video_file.url, controls: true, size: "300x300" %>
                   </div>
                   <div class="panel-footer">Shared by: <%= post.user %></div>
                </div>
