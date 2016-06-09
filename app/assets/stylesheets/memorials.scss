@@ -93,13 +93,12 @@
 
 #videos-thumbnail {
    align-items: center;
-   // background-image: url('app\assets\images\feed_Video-Play-Screen.png');
    background-color: black;
    color: black;
    display: -ms-flexbox;
    display: -webkit-flex;
    display: flex;
-   height: 100%;
+   height: 300px;
    justify-content: center;
    -ms-flex-align: center;
    text-align: center;
