@@ -49,6 +49,14 @@
                  <div class="panel-footer">Shared by: <%= post.user %></div>
                </div>
             </div>
+         <% elsif post.postable_type == "Video" %>
+            <div class="col-xs-12 col-sm-6 col-md-4 post">
+               <div class="panel panel-default">
+                  <div class="panel-body">
+                     <%= video_tag post.postable.video_file.url, controls: true %>
+                  </div>
+               </div>
+            </div>
          <% end %>
       <% end %>
    </div>
