@@ -3,22 +3,30 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 var main = function() {
    modalRefresh = function() {
-      $('.texts-form').css("display", "none");
       $('.pictures-form').css("display", "none");
+      $('.texts-form').css("display", "none");
+      $('.videos-form').css("display", "none");
    };
 
    window.onscroll = function() {
       $(".navbar-memorial").css({"opacity": "1", "position": "fixed"});
    };
 
+
+
+   $(document).on("click", '.pictures-button', function() {
+      modalRefresh();
+      $('.pictures-form').css("display", "block");
+   });
+
    $(document).on("click", '.texts-button', function() {
       modalRefresh();
       $('.texts-form').css("display", "block");
    });
 
-   $(document).on("click", '.pictures-button', function() {
+   $(document).on("click", '.videos-button', function() {
       modalRefresh();
-      $('.pictures-form').css("display", "block");
+      $('.videos-form').css("display", "block");
    });
 
 }

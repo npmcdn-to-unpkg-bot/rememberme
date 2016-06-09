@@ -89,6 +89,22 @@
            </div>
         <% end %>
 
+        <%= form_for Video.new do |f| %>
+           <div class="modal-header videos-form">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-title" id="myModalLabel">Share a Video</h4>
+           </div>
+           <div class="modal-body videos-form">
+                <p><%= f.file_field :video_file %></p>
+                <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
+           </div>
+           <div class="modal-footer videos-form">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <%= f.submit "Share Video", class: "btn btn-primary"%>
+          </div>
+       <% end %>
+
+
        </div>
      </div>
    </div>

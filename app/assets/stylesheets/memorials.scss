@@ -16,13 +16,13 @@
       -webkit-box-align: center;
    }
 
-   .epitaph h1 {
-      font-size: 100px;
-   }
+.epitaph h1 {
+   font-size: 100px;
+}
 
-   .epitaph h2 {
-      font-size: 60px;
-   }
+.epitaph h2 {
+   font-size: 60px;
+}
 
 .panel-body {
    font-size: 20px;
@@ -85,6 +85,10 @@
   right: 0;
   top: 0;
   z-index: -1;
+}
+
+.videos-form {
+   display: none;
 }
 
 
