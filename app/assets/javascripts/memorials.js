@@ -34,5 +34,13 @@ var main = function() {
      columnWidth: 200
    });
 
+   var $grid = $('.grid').masonry({
+  // options...
+   });
+
+   $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+   });
+
 }
 $(document).ready(main);
