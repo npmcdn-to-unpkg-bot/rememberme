@@ -29,18 +29,17 @@ var main = function() {
       $('.videos-form').css("display", "block");
    });
 
-   $('.grid').masonry({
-     itemSelector: '.grid-item',
-     columnWidth: 200
-   });
-
-   var $grid = $('.grid').masonry({
-  // options...
-   });
-
-   $grid.imagesLoaded().progress( function() {
-      $grid.masonry('layout');
-   });
+   // $('.grid').masonry({
+   //   itemSelector: '.grid-item',
+   //   columnWidth: 200
+   // });
+   //
+   // var $grid = $('.grid').masonry({
+   // });
+   //
+   // $grid.imagesLoaded().progress( function() {
+   //    $grid.masonry('layout');
+   // });
 
 }
 $(document).ready(main);
