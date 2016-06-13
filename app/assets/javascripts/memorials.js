@@ -29,10 +29,10 @@ var main = function() {
       $('.videos-form').css("display", "block");
    });
 
-   $('.grid').masonry({
-     itemSelector: '.grid-item',
-     columnWidth: 200
-   });
+   // $('.grid').masonry({
+   //   itemSelector: '.grid-item',
+   //   columnWidth: 200
+   // });
 
    var $grid = $('.grid').masonry({
    });
