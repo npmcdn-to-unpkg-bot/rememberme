@@ -108,42 +108,14 @@
    -webkit-box-align: center;
 }
 
-// .grid-item {
-//   float: left;
-//   width: 200px;
-//   border: 2px solid hsla(0, 0%, 0%, 0.5);
-// }
-//
-// .grid-item--width2 { width: 160px; }
-// .grid-item--height2 { height: 140px; }
 
+// Begin Masonry CSS
+.grid-item {
+  float: left;
+  width: 80px;
+  height: 60px;
+  border: 2px solid hsla(0, 0%, 0%, 0.5);
+}
 
-// @include media-breakpoint-up(sm) {
-//    .epitaph h1 {
-//       font-size: 10px;
-//    }
-//
-//    .epitaph h2 {
-//       font-size: 6px;
-//    }
-// }
-//
-// @include media-breakpoint-up(md) {
-//    .epitaph h1 {
-//       font-size: 50px;
-//    }
-//
-//    .epitaph h2 {
-//       font-size: 30px;
-//    }
-// }
-//
-// @include media-breakpoint-up(lg) {
-//    .epitaph h1 {
-//       font-size: 100px;
-//    }
-//
-//    .epitaph h2 {
-//       font-size: 60px;
-//    }
-// }
+.grid-item--width2 { width: 160px; }
+.grid-item--height2 { height: 140px; }

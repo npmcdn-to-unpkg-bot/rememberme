@@ -65,18 +65,18 @@
    </div>
 
 <!-- Masonry Grid Begin -->
-   <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+   <div class="grid">
       <% @memorial.posts.each do |post| %>
          <% if post.postable_type == "Text" %>
-            <div class="box col3">
+            <div class="grid-item">
                    <%= post.postable.try(:body) %>
             </div>
          <% elsif post.postable_type == "Picture" %>
-            <div class="box col2">
+            <div class="grid-item">
                    <%= image_tag post.postable.image.feed.url %>
             </div>
          <% elsif post.postable_type == "Video" %>
-            <div class="box col1">
+            <div class="grid-item">
                    <%= video_tag post.postable.video_file.url, controls: true, size: "300x300" %>
             </div>
          <% end %>
