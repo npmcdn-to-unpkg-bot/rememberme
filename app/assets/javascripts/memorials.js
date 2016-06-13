@@ -29,10 +29,13 @@ var main = function() {
       $('.videos-form').css("display", "block");
    });
 
-   // $('.grid').masonry({
-   //   itemSelector: '.grid-item',
-   //   columnWidth: 200
-   // });
+   $('.grid').masonry({
+  // set itemSelector so .grid-sizer is not used in layout
+  itemSelector: '.grid-item',
+  // use element for option
+  columnWidth: '.grid-sizer',
+  percentPosition: true
+})
 
    var $grid = $('.grid').masonry({
    });
