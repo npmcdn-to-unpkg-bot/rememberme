@@ -29,15 +29,15 @@ var main = function() {
       $('.videos-form').css("display", "block");
    });
 
-   $('.grid').masonry({
-  // set itemSelector so .grid-sizer is not used in layout
-  itemSelector: '.grid-item',
-  // use element for option
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-})
 
-   var $grid = $('.grid').masonry({
+   var $grid = $('.grid').masonry({ });
+
+   $grid.masonry({
+     // set itemSelector so .grid-sizer is not used in layout
+     itemSelector: '.grid-item',
+     // use element for option
+     columnWidth: '.grid-sizer',
+     percentPosition: true
    });
 
    $grid.imagesLoaded().progress( function() {
