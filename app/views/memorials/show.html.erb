@@ -64,31 +64,6 @@
       <% end %>
    </div>
 
-<!-- Masonry Grid Begin -->
-   <div class="grid">
-      <% @memorial.posts.each do |post| %>
-         <% if post.postable_type == "Text" %>
-            <div class="grid-item">
-                   <%= post.postable.try(:body) %>
-            </div>
-         <% elsif post.postable_type == "Picture" %>
-            <div class="grid-item">
-                   <%= image_tag post.postable.image.feed.url %>
-            </div>
-         <% elsif post.postable_type == "Video" %>
-            <div class="grid-item">
-                   <%= video_tag post.postable.video_file.url, controls: true, size: "300x300" %>
-            </div>
-         <% end %>
-      <% end %>
-   </div>
-   <!-- Masonry End -->
-
-
-
-
-
-
    <!-- Modal -->
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
      <div class="modal-dialog" role="document">
@@ -144,6 +119,27 @@
    </div>
 
 </div>
+<!-- End of Bootstrap Container -->
+
+
+   <div class="grid">
+      <% @memorial.posts.each do |post| %>
+         <% if post.postable_type == "Text" %>
+            <div class="grid-item">
+                   <%= post.postable.try(:body) %>
+            </div>
+         <% elsif post.postable_type == "Picture" %>
+            <div class="grid-item">
+                   <%= image_tag post.postable.image.feed.url %>
+            </div>
+         <% elsif post.postable_type == "Video" %>
+            <div class="grid-item">
+                   <%= video_tag post.postable.video_file.url, controls: true, size: "300x300" %>
+            </div>
+         <% end %>
+      <% end %>
+   </div>
+<!-- End of Masonry Grid -->
 
 <script>
 
