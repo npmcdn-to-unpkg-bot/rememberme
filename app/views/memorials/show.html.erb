@@ -118,10 +118,6 @@
      </div>
    </div>
 
-</div>
-<!-- End of Bootstrap Container -->
-
-<div class="container">
    <div class="grid">
       <% @memorial.posts.each do |post| %>
          <% if post.postable_type == "Text" %>
@@ -148,8 +144,11 @@
          <% end %>
       <% end %>
    </div>
-</div>
 <!-- End of Masonry Grid -->
+
+</div>
+<!-- End of Bootstrap Container -->
+
 
 <script>
 
