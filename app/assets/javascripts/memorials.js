@@ -1,18 +1,17 @@
-// # Place all the behaviors and hooks related to the matching controller here.
-// # All this logic will automatically be available in application.js.
-// # You can use CoffeeScript in this file: http://coffeescript.org/
 var main = function() {
-   modalRefresh = function() {
-      $('.pictures-form').css("display", "none");
-      $('.texts-form').css("display", "none");
-      $('.videos-form').css("display", "none");
-   };
 
+// navbar jQuery =============================================================
    window.onscroll = function() {
       $(".navbar-memorial").css({"opacity": "1", "position": "fixed"});
    };
 
 
+// Modal jQuery ===============================================================
+   modalRefresh = function() {
+      $('.pictures-form').css("display", "none");
+      $('.texts-form').css("display", "none");
+      $('.videos-form').css("display", "none");
+   };
 
    $(document).on("click", '.pictures-button', function() {
       modalRefresh();
@@ -30,19 +29,19 @@ var main = function() {
    });
 
 
+//Masonry jQuery ==============================================================
    var $grid = $('.grid').masonry({ });
 
-   $grid.masonry({
-     // set itemSelector so .grid-sizer is not used in layout
-     itemSelector: '.grid-item',
-     // use element for option
-     columnWidth: '.grid-sizer',
-     percentPosition: true
-   });
+      $grid.masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+      });
 
-   $grid.imagesLoaded().progress( function() {
-      $grid.masonry('layout');
-   });
+      $grid.imagesLoaded().progress( function() {
+         $grid.masonry('layout');
+      });
 
 }
+
 $(document).ready(main);
