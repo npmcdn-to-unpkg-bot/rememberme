@@ -29,15 +29,15 @@
    display: none;
 }
 
+
+
 .post {
 
-   img {
-      width: 100%;
+   video {
+         background-color: black;
+         width: 100%;
    }
-}
 
-.posts {
-   padding-top: 10px;
 }
 
 .posts-forms {
@@ -81,6 +81,13 @@
   right: 0;
   top: 0;
   z-index: -1;
+}
+
+.txt {
+   border: 2px solid gray;
+   font-size: 24px;
+   font-family: Andale Mono, monospace;
+   padding: 10px;
 }
 
 .videos-form {
