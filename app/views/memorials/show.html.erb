@@ -29,41 +29,6 @@
       <% end %>
    </div>
 
-   <!-- <div class="posts row">
-      <% @memorial.posts.each do |post| %>
-         <% if post.postable_type == "Text" %>
-            <div class="col-xs-12 col-sm-6 col-md-4 post">
-               <div class="panel panel-default">
-                 <div class="panel-body">
-                   <%= post.postable.try(:body) %>
-                 </div>
-                 <div class="panel-footer">Shared by: <%= post.user %></div>
-               </div>
-            </div>
-         <% elsif post.postable_type == "Picture" %>
-            <div class="col-xs-12 col-sm-6 col-md-4 post">
-               <div class="panel panel-default">
-                 <div class="panel-body">
-                   <%= image_tag post.postable.image.feed.url %>
-                 </div>
-                 <div class="panel-footer">Shared by: <%= post.user %></div>
-               </div>
-            </div>
-         <% elsif post.postable_type == "Video" %>
-            <div class="col-xs-12 col-sm-6 col-md-4 post">
-               <div class="panel panel-default">
-                  <div class="panel-body">
-                     <div id="videos-thumbnail">
-                        <%= video_tag post.postable.video_file.url, controls: true, size: "300x300" %>
-                     </div>
-                  </div>
-                  <div class="panel-footer">Shared by: <%= post.user %></div>
-               </div>
-            </div>
-         <% end %>
-      <% end %>
-   </div> -->
-
    <!-- Modal -->
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
      <div class="modal-dialog" role="document">
@@ -134,14 +99,14 @@
             <div class="grid-item grid-item--height2"></div> -->
          <% elsif post.postable_type == "Picture" %>
             <div class="grid-sizer"></div>
-            <div class="grid-item post">
+            <div class="grid-item pic post">
                    <%= image_tag post.postable.image.feed.url %>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
             <div class="grid-item grid-item--height2"></div> -->
          <% elsif post.postable_type == "Video" %>
             <div class="grid-sizer"></div>
-            <div class="grid-item post">
+            <div class="grid-item vid post">
                    <%= video_tag post.postable.video_file.url, controls: true, size: "300x300" %>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>

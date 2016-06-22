@@ -20,16 +20,13 @@
   font-size: 60px;
 }
 
-.panel-body {
-   font-size: 20px;
-   min-height: 360px;
-}
-
 .pictures-form {
    display: none;
 }
 
-
+.pic {
+   content: center;
+}
 
 .post {
 
@@ -94,24 +91,10 @@
    display: none;
 }
 
-#videos-thumbnail {
-   align-items: center;
-   background-color: black;
-   color: black;
-   display: -ms-flexbox;
-   display: -webkit-flex;
-   display: flex;
-   height: 100%;
-   justify-content: center;
-   margin: 0;
-   -ms-flex-align: center;
-   padding: 0;
-   text-align: center;
-   -webkit-align-items: center;
-   -webkit-box-align: center;
-}
-
 // Masonry CSS ================================================================
+.grid {
+   margin: 0 auto;
+}
 .grid-sizer,
 .grid-item { width: 25%; }
 .grid-item--width2 { width: 50%; }
