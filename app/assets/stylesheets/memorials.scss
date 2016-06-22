@@ -107,8 +107,26 @@
 // Masonry CSS ================================================================
 .grid-sizer,
 .grid-item { width: 25%; }
-.grid-item--width2 { width: 40%; }
+.grid-item--width2 { width: 50%; }
 
 .masonry-container {
    margin-top: 80px;
+}
+
+@media (max-width: 1250px) {
+   .grid-sizer,
+   .grid-item { width: 33%; }
+   .grid-item--width2 { width: 66%; }
+}
+
+@media (max-width: 850px) {
+   .grid-sizer,
+   .grid-item { width: 50%; }
+   .grid-item--width2 { width: 100%; }
+}
+
+@media (max-width: 450px) {
+   .grid-sizer,
+   .grid-item { width: 100%; }
+   .grid-item--width2 { width: 100%; }
 }
