@@ -181,10 +181,16 @@
 
    });
 
-   // setTimeout(function() {
-   //    $(".activeSlide").animate({"opacity": "0"}, 1000);
-   //    active.removeClass("activeSlide");
-   //    next.addClass("activeSlide");
-   // }, 4000);
+   var $grid = $('.grid').masonry({ });
+
+      $grid.masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+      });
+
+      $grid.imagesLoaded().progress( function() {
+         $grid.masonry('layout');
+      });
 
 </script>

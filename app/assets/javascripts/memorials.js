@@ -28,20 +28,6 @@ var main = function() {
       $('.videos-form').css("display", "block");
    });
 
-
-//Masonry jQuery ==============================================================
-   var $grid = $('.grid').masonry({ });
-
-      $grid.masonry({
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true
-      });
-
-      $grid.imagesLoaded().progress( function() {
-         $grid.masonry('layout');
-      });
-
 }
 
 $(document).ready(main);
