@@ -26,6 +26,10 @@
 
 .pic {
    content: center;
+
+   img {
+     width: 100%;
+   }
 }
 
 .post {
@@ -81,6 +85,7 @@
 }
 
 .txt {
+   background-color: #f7f7f7;
    border: 2px solid gray;
    font-size: 24px;
    font-family: Andale Mono, monospace;
