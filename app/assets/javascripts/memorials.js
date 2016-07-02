@@ -34,36 +34,42 @@ var main = function() {
       $('.videos-form').css("display", "block");
    });
 
-       //
-      //  $('.pictures-button').hover(
-      //    function() {
-      //      $(this).css("font-size", "25px");
-      //      $(this).css( 'cursor', 'pointer' );
-       //
-      //    }, function() {
-      //      $(this).css("font-size", "18px");
-       //
-      //  });
-       //
-      //  $('.texts-button').hover(
-      //    function() {
-      //      $(this).css("font-size", "25px");
-      //      $(this).css( 'cursor', 'pointer' );
-       //
-      //    }, function() {
-      //      $(this).css("font-size", "18px");
-       //
-      //  });
-       //
-      //  $('.videos-button').hover(
-      //    function() {
-      //      $(this).css("font-size", "25px");
-      //      $(this).css( 'cursor', 'pointer' );
-       //
-      //    }, function() {
-      //      $(this).css("font-size", "18px");
-       //
-      //  });
+   $(document).on("hover", ".pictures-button",
+   function() {
+     $(this).css("font-size", "20px");
+   }, function() {
+     $(this).css("font-size", "20px");
+   });
+
+     $('.pictures-button').hover(
+       function() {
+         $(this).css("font-size", "20px");
+         $(this).css( 'cursor', 'pointer' );
+
+       }, function() {
+         $(this).css("font-size", "18px");
+
+     });
+
+     $('.texts-button').hover(
+       function() {
+         $(this).css("font-size", "20px");
+         $(this).css( 'cursor', 'pointer' );
+
+       }, function() {
+         $(this).css("font-size", "18px");
+
+     });
+
+     $('.videos-button').hover(
+       function() {
+         $(this).css("font-size", "20px");
+         $(this).css( 'cursor', 'pointer' );
+
+       }, function() {
+         $(this).css("font-size", "18px");
+
+     });
 
 } // End jQuery
 
