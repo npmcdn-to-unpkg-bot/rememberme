@@ -110,7 +110,7 @@
          <% elsif post.postable_type == "Video" %>
             <div class="grid-sizer"></div>
             <div class="grid-item vid post">
-                   <%= video_tag post.postable.video_file.url, controls: true, size: "300x300" %>
+                   <%= video_tag post.postable.video_file.url, controls: true %>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
             <div class="grid-item grid-item--height2"></div> -->
@@ -124,41 +124,42 @@
 <script>
 
    $(document).ready(function() {
-      var pictureUrl = [
-         <% @pics.each do |pic| %>
-            <% if pic == @pics.last %>
-               "<%= pic.image.url %>"
-            <% else %>
-               "<%= pic.image.url %>",
-            <% end %>
-         <% end %>
-      ];
+     
+        var pictureUrl = [
+           <% @pics.each do |pic| %>
+              <% if pic == @pics.last %>
+                 "<%= pic.image.url %>"
+              <% else %>
+                 "<%= pic.image.url %>",
+              <% end %>
+           <% end %>
+        ];
 
-      $(".tombstone").css("background-image", "url(" + pictureUrl[0] + ")");
-      var length = pictureUrl.length
-      var i = length - 1
-      setInterval(function() {
-         if (i == 0) {
-            $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
-            i = length - 1
-         } else {
-            $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
-            i = i - 1
-         };
-      }, 4000);
+        $(".tombstone").css("background-image", "url(" + pictureUrl[0] + ")");
+        var length = pictureUrl.length
+        var i = length - 1
+        setInterval(function() {
+           if (i == 0) {
+              $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
+              i = length - 1
+           } else {
+              $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
+              i = i - 1
+           };
+        }, 4000);
 
-   });
+      setTimeout(function() {
+        var $grid = $('.grid').masonry({ });
+           $grid.masonry({
+             itemSelector: '.grid-item',
+             columnWidth: '.grid-sizer',
+             percentPosition: true
+           });
 
-   var $grid = $('.grid').masonry({ });
+           $grid.imagesLoaded().progress( function() {
+              $grid.masonry('layout');
+           });
+         }, 700); // setTimeout
 
-      $grid.masonry({
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true
-      });
-
-      $grid.imagesLoaded().progress( function() {
-         $grid.masonry('layout');
-      });
-
+   }); // Document Ready
 </script>
