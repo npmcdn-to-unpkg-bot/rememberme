@@ -113,6 +113,14 @@
 }
 
 @media (max-width: 1250px) {
+  .epitaph h1 {
+    font-size: 80px;
+  }
+
+  .epitaph h2 {
+    font-size: 50px;
+  }
+
    .grid-sizer,
    .grid-item { width: 33%; }
    .grid-item--width2 { width: 66%; }
@@ -124,7 +132,7 @@
   }
 
   .epitaph h2 {
-    font-size: 30px;
+    font-size: 35px;
   }
 
    .grid-sizer,
@@ -134,7 +142,7 @@
 
 @media (max-width: 450px) {
   .epitaph h1 {
-    font-size: 50px;
+    font-size: 35px;
   }
 
   .epitaph h2 {
