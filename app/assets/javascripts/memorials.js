@@ -12,7 +12,7 @@ var main = function() {
   };
 
 
-// Modal jQuery ===============================================================
+// Post Modals ===============================================================
    modalRefresh = function() {
       $('.pictures-form').css("display", "none");
       $('.texts-form').css("display", "none");
@@ -34,6 +34,36 @@ var main = function() {
       $('.videos-form').css("display", "block");
    });
 
-}
+   $('.pictures-button').hover(
+     function() {
+       $(this).css("font-size", "25px");
+       $(this).css( 'cursor', 'pointer' );
+
+     }, function() {
+       $(this).css("font-size", "18px");
+
+   });
+
+     $('.texts-button').hover(
+       function() {
+         $(this).css("font-size", "25px");
+         $(this).css( 'cursor', 'pointer' );
+
+       }, function() {
+         $(this).css("font-size", "18px");
+
+     });
+
+       $('.videos-button').hover(
+         function() {
+           $(this).css("font-size", "25px");
+           $(this).css( 'cursor', 'pointer' );
+
+         }, function() {
+           $(this).css("font-size", "18px");
+
+       });
+
+} // End jQuery
 
 $(document).ready(main);

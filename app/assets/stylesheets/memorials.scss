@@ -27,36 +27,37 @@
 .pic {
    content: center;
 
-   img {
-     width: 100%;
-   }
+   img {width: 100%;}
 }
 
 .post {
 
-   video {
-         background-color: black;
-         width: 100%;
-   }
+   video {background-color: black; width: 100%;}
 
 }
 
 .posts-forms {
+   background-color: #f8f8f8;
+   border: 1px solid gray;
+   height: 50px;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+
    align-items: center;
    display: -ms-flexbox;
    display: -webkit-flex;
    display: flex;
-   height: 40px;
    justify-content: center;
-   margin-top: 10px;
    -ms-flex-align: center;
    text-align: center;
    -webkit-align-items: center;
    -webkit-box-align: center;
 }
 
-.posts-forms .btn {
-   color: white;
+.posts-form-button {
+   color: #333333;
+   display: inline-block;
    margin-left: 5px;
    margin-right: 5px;
 }
@@ -85,8 +86,9 @@
 }
 
 .txt {
-   background-color: #f7f7f7;
+   background-color: #f8f8f8;
    border: 2px solid gray;
+   color: #333333;
    font-size: 24px;
    font-family: Andale Mono, monospace;
    padding: 10px;
@@ -105,7 +107,6 @@
 .grid-item--width2 { width: 50%; }
 
 .masonry-container {
-   margin-top: 80px;
 }
 
 @media (max-width: 1250px) {
