@@ -36,6 +36,10 @@
 
 }
 
+.posts-collapse-btn {
+  display: none;
+}
+
 .posts-forms {
    background-color: #f8f8f8;
    border: 1px solid gray;
@@ -119,6 +123,10 @@
    .grid-sizer,
    .grid-item { width: 50%; }
    .grid-item--width2 { width: 100%; }
+
+   .posts-collapse-btn {
+     display: block;
+   }
 }
 
 @media (max-width: 450px) {
