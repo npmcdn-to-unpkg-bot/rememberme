@@ -7,7 +7,7 @@
           </a>
         </div>
         <div class="media-body">
-            <h4 class="media-heading"><%= link_to "#{memorial.first_name} #{memorial.last_name} | #{memorial.dob.year} - #{memorial.dod.year}", memorial %></h4>
+            <h4 class="media-heading"><%= link_to "#{memorial.first_name} #{memorial.last_name} | #{memorial.dob.year} - #{memorial.dod.year}", memorial, class: "rails-link" %></h4>
         </div>
       </div>
    <% end %>

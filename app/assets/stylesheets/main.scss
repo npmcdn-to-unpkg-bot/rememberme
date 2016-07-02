@@ -20,6 +20,10 @@ nav {
    width: 100%;
 }
 
+a.rails-link:hover {
+  background-color: transparent;
+}
+
 .well {
    min-height: 200px;
 }
