@@ -41,36 +41,6 @@ var main = function() {
      $(this).css("font-size", "20px");
    });
 
-     $('.pictures-button').hover(
-       function() {
-         $(this).css("font-size", "20px");
-         $(this).css( 'cursor', 'pointer' );
-
-       }, function() {
-         $(this).css("font-size", "18px");
-
-     });
-
-     $('.texts-button').hover(
-       function() {
-         $(this).css("font-size", "20px");
-         $(this).css( 'cursor', 'pointer' );
-
-       }, function() {
-         $(this).css("font-size", "18px");
-
-     });
-
-     $('.videos-button').hover(
-       function() {
-         $(this).css("font-size", "20px");
-         $(this).css( 'cursor', 'pointer' );
-
-       }, function() {
-         $(this).css("font-size", "18px");
-
-     });
-
 } // End jQuery
 
 $(document).ready(main);
