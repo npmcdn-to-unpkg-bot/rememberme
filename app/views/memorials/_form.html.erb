@@ -15,6 +15,10 @@
       <%= f.label :dod, "Date of Passing" %> <br>
       <%= f.date_select :dod, options = {start_year: 1500} %>
    </div>
+   <div class="field">
+      <%= f.label :bio, "Biography" %> <br>
+      <%= f.text_field :bio %>
+   </div>
    <div class="actions">
      <%= f.submit %>
    </div>

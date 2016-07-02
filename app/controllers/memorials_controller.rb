@@ -14,6 +14,7 @@ class MemorialsController < ApplicationController
    end
 
    def edit
+     @memorial = Memorial.friendly.find(params[:id])
    end
 
    def create
@@ -22,6 +23,12 @@ class MemorialsController < ApplicationController
    end
 
    def update
+     @memorial = Memorial.friendly.find(params[:id])
+     if @memorial.update_attributes(memorial_params)
+       redirect_to memorial_path(@memorial)
+     else
+       render :new
+     end
    end
 
    def destroy
@@ -31,6 +38,6 @@ class MemorialsController < ApplicationController
 
    private
    def memorial_params
-      params.require(:memorial).permit(:first_name, :last_name, :dob, :dod)
+      params.require(:memorial).permit(:first_name, :last_name, :dob, :dod, :bio)
    end
 end
