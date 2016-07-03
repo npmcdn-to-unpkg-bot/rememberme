@@ -1,5 +1,5 @@
 body {
-   background-color: #f8f8f8;
+  background: linear-gradient(to bottom, #f8f8f8, gray);
    height: 100%;
 }
 
@@ -22,7 +22,7 @@ nav {
 .nav-btn {
   background-color: #f8f8f8;
   border: 0;
-  color: gray;
+  color: black;
 }
 
 .nav-btn:hover {
@@ -30,16 +30,17 @@ nav {
 }
 
 .navbar .nav li a {
-  color: #f8f8f8;
+  color: black;
 }
 
 .navbar-default {
-  background-color: gray;
+  // background: linear-gradient(to bottom, gray, #f8f8f8);
+  background: linear-gradient(to bottom, #f8f8f8, gray);
   border: 1px solid #f8f8f8;
   border-radius: 0;
   color: #f8f8f8;
 
-  .navbar-brand {color: #f8f8f8;}
+  .navbar-brand {color: black;}
 }
 
 .navbar-memorial {
