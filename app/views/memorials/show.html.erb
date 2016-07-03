@@ -14,6 +14,12 @@
 
 </div>
 
+<div id="bio">
+  <div class="container">
+    <p class="bio"><%= @memorial.try(:bio) %></p>
+  </div>
+</div>
+
    <div class="posts-forms">
         <% if current_user %>
               <button class="posts-form-button texts-button" data-toggle="modal" data-target="#myModal">
@@ -85,6 +91,7 @@
      </div>
    </div>
 
+
 <div class="masonry-container posts">
    <div class="grid">
       <% @memorial.posts.each do |post| %>
@@ -116,7 +123,6 @@
    <!-- End of Masonry Grid -->
 
    <%= link_to "edit", edit_memorial_path %>
-   <%= @memorial.bio.try %>
 
 <script>
 

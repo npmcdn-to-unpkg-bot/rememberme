@@ -1,3 +1,16 @@
+#bio {
+  color: black;
+  background: linear-gradient(to bottom, gray, #f8f8f8);
+}
+
+.bio {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 30px #fcfcfc;
+
+}
+
 .epitaph {
       align-items: center;
       color: black;
@@ -38,7 +51,6 @@
 
 .posts-forms {
    background-color: #f8f8f8;
-   border: 1px solid gray;
    height: 55px;
    margin: 0;
    padding: 0;
@@ -90,7 +102,6 @@
 
 .txt {
    background-color: #f8f8f8;
-   border: 2px solid gray;
    color: #333333;
    font-size: 24px;
    font-family: Andale Mono, monospace;
