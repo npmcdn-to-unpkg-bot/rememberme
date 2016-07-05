@@ -33,6 +33,25 @@
   font-size: 60px;
 }
 
+.memorial-form-bio {
+  width: 400px;
+}
+
+.memorial-form-break {
+  display: none;
+}
+
+.memorial-form-date {
+  margin-bottom: 10px;
+  width: 133.33px;
+}
+
+.memorial-form-name {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
 
 .pictures-form {
    display: none;
@@ -167,4 +186,23 @@
    .grid-item--width2 { width: 100%; }
 
    .forms-break {display:block;}
+
+   .memorial-form-bio {
+     width: 200px;
+   }
+
+   .memorial-form-break {
+     display: block;
+   }
+
+   .memorial-form-date {
+     margin-bottom: 10px;
+     width: 66.66px;
+   }
+
+   .memorial-form-name {
+     display: inline-block;
+     margin-bottom: 10px;
+     width: 200px;
+   }
 }
