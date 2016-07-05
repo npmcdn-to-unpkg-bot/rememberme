@@ -13,6 +13,20 @@ button:focus {
    height: 100%;
 }
 
+.form-page {
+      align-items: center;
+      color: black;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      -ms-flex-align: center;
+      text-align: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+   }
+
 html {
    height: 100%;
 }

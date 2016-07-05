@@ -1,25 +1,30 @@
-<%= form_for(@memorial) do |f| %>
-   <div class="field">
-     <%= f.label :first_name %><br>
-     <%= f.text_field :first_name %>
-   </div>
-   <div class="field">
-     <%= f.label :last_name %><br>
-     <%= f.text_field :last_name %>
-   </div>
-   <div class="field">
-      <%= f.label :dob, "Date of Birth" %> <br>
-      <%= f.date_select :dob, options = {start_year: 1500} %>
-   </div>
-   <div class="field">
-      <%= f.label :dod, "Date of Passing" %> <br>
-      <%= f.date_select :dod, options = {start_year: 1500} %>
-   </div>
-   <div class="field">
-      <%= f.label :bio, "Biography" %> <br>
-      <%= f.text_field :bio %>
-   </div>
-   <div class="actions">
-     <%= f.submit %>
-   </div>
-<% end %>
+<div>
+  <h1>Remember</h1>
+  <div>
+    <%= form_for(@memorial) do |f| %>
+       <div class="field">
+         <%= f.label :first_name %><br>
+         <%= f.text_field :first_name %>
+       </div>
+       <div class="field">
+         <%= f.label :last_name %><br>
+         <%= f.text_field :last_name %>
+       </div>
+       <div class="field">
+          <%= f.label :bio, "Biography" %><br>
+          <%= f.text_field :bio %>
+       </div>
+       <div class="field">
+          <%= f.label :dob, "Date of Birth" %><br>
+          <%= f.date_select :dob, options = {start_year: 1500} %>
+       </div>
+       <div class="field">
+          <%= f.label :dod, "Date of Passing" %><br>
+          <%= f.date_select :dod, options = {start_year: 1500} %>
+       </div>
+       <div class="actions">
+         <%= f.submit %>
+       </div>
+    <% end %>
+  </div>
+</div>
