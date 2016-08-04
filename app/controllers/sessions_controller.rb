@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+cclass SessionsController < ApplicationController
   def new
   end
 
@@ -14,6 +14,6 @@ class SessionsController < ApplicationController
 
   def destroy
      session[:user_id] = nil
-     redirect_to root_url, notice: 'Logged Ou!'
+     redirect_to root_url, notice: 'Logged Out!'
   end
 end
