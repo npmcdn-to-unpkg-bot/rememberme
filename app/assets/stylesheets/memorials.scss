@@ -64,9 +64,24 @@
 }
 
 .post {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 90%;
 
-   video {background-color: black; display: block; width: 100%;}
+  p {
+    border-top: 1px solid black;
+    padding: 30px;
+  }
 
+  video {
+    background-color: black;
+    display: block;
+    width: 100%;
+  }
 }
 
 .posts-forms {
@@ -137,7 +152,9 @@
    margin: 0 auto;
 }
 .grid-sizer,
-.grid-item { width: 25%; }
+.grid-item {
+  width: 25%;
+}
 .grid-item--width2 { width: 50%; }
 
 .masonry-container {

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <% if controller.controller_name == "memorials" && controller.action_name == "show" %>
+    <title> <%= "#{@memorial.first_name} #{@memorial.last_name} | The Bell Tolls" %></title>
+  <% else %>
   <title> The Bell Tolls</title>
+  <% end %>
   <%= favicon_link_tag 'favicon.ico' %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
