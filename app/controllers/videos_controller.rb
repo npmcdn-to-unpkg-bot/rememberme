@@ -19,7 +19,7 @@ class VideosController < ApplicationController
 
    private
       def video_params
-         params.require(:video).permit(:video_file)
+         params.require(:video).permit(:body, :video_file)
       end
 
       def params_memorial

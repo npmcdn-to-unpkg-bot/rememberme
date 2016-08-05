@@ -64,6 +64,7 @@
             </div>
             <div class="modal-body pictures-form">
                   <p><%= f.file_field :image %></p>
+                  <p><%= f.text_area :body %></p>
                   <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
             </div>
             <div class="modal-footer pictures-form">
@@ -79,6 +80,7 @@
            </div>
            <div class="modal-body videos-form">
                 <p><%= f.file_field :video_file %></p>
+                <p><%= f.text_area :body %></p>
                 <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
            </div>
            <div class="modal-footer videos-form">
@@ -106,6 +108,7 @@
             <div class="grid-sizer"></div>
             <div class="grid-item pic post">
                    <%= image_tag post.postable.image.feed.url %>
+                   <%= post.postable.try(:body) %>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
             <div class="grid-item grid-item--height2"></div> -->
@@ -113,6 +116,7 @@
             <div class="grid-sizer"></div>
             <div class="grid-item vid post">
                    <%= video_tag post.postable.video_file.url, controls: true %>
+                   <%= post.postable.try(:body) %>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
             <div class="grid-item grid-item--height2"></div> -->
