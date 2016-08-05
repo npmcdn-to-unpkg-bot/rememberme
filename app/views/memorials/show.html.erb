@@ -104,7 +104,7 @@
                 <div class="txt">
                    <p class="body"><%= post.postable.try(:body) %></p>
                  </div>
-                 <p class="timestamp"><%= "Posted by: #{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
+                 <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
@@ -119,7 +119,7 @@
                       <p class="body"><%= post.postable.body %></p>
                      <% end %>
                    </div>
-                   <p class="timestamp"><%= "Posted by: #{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
+                   <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
@@ -134,7 +134,7 @@
                       <p class="body"><%= post.postable.body %></p>
                      <% end %>
                    </div>
-                   <p class="timestamp"><%= "Posted by: #{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
+                   <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
