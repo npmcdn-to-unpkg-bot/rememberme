@@ -4,11 +4,15 @@
 }
 
 .bio {
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
   text-shadow: 0 0 30px #fcfcfc;
 
+}
+
+.body {
+  border-top: 1px solid black;
 }
 
 .epitaph {
@@ -73,7 +77,6 @@
   width: 90%;
 
   p {
-    border-top: 1px solid black;
     padding: 30px;
   }
 

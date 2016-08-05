@@ -104,6 +104,7 @@
                 <div class="txt">
                    <%= post.postable.try(:body) %>
                  </div>
+                 <p><%= "#{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
@@ -118,6 +119,7 @@
                       <p><%= post.postable.body %></p>
                      <% end %>
                    </div>
+                   <p><%= "#{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
@@ -132,6 +134,7 @@
                       <p><%= post.postable.body %></p>
                      <% end %>
                    </div>
+                   <p><%= "#{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
