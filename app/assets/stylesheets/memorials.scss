@@ -226,3 +226,20 @@
      width: 200px;
    }
 }
+
+// Memorials Index =============================================================
+
+.media {
+  border-bottom: 1px solid gray;
+  height: 200px;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+}
+
+.media-fade {
+  background: linear-gradient(to bottom, rgba(248, 248, 248, 0), rgba(248, 248, 248, 1));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
