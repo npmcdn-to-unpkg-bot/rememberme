@@ -102,9 +102,9 @@
             <div class="grid-item">
               <div class="post">
                 <div class="txt">
-                   <%= post.postable.try(:body) %>
+                   <p class="body"><%= post.postable.try(:body) %></p>
                  </div>
-                 <p><%= "#{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
+                 <p class="timestamp"><%= "Posted by: #{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
@@ -114,12 +114,12 @@
             <div class="grid-item">
               <div class="post">
                    <%= image_tag post.postable.image.feed.url, :class => "pic" %>
-                   <div class="body">
+                   <div>
                      <% unless post.postable.body == nil %>
-                      <p><%= post.postable.body %></p>
+                      <p class="body"><%= post.postable.body %></p>
                      <% end %>
                    </div>
-                   <p><%= "#{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
+                   <p class="timestamp"><%= "Posted by: #{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>
@@ -129,12 +129,12 @@
             <div class="grid-item">
               <div class="post">
                    <%= video_tag post.postable.video_file.url, controls: true, :class => "vid" %>
-                   <div class="body">
+                   <div>
                      <% unless post.postable.body == nil %>
-                      <p><%= post.postable.body %></p>
+                      <p class="body"><%= post.postable.body %></p>
                      <% end %>
                    </div>
-                   <p><%= "#{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
+                   <p class="timestamp"><%= "Posted by: #{post.user.first_name} #{post.user.last_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
               </div>
             </div>
             <!-- <div class="grid-item grid-item--width2"></div>

@@ -12,7 +12,8 @@
 }
 
 .body {
-  border-top: 1px solid black;
+  padding: 30px 30px 15px 30px;
+  font-size: 16px;
 }
 
 .epitaph {
@@ -62,9 +63,8 @@
 }
 
 .pic {
-   content: center;
-
-   img {width: 100%;}
+   border-bottom: 1px solid black;
+   width: 100%;
 }
 
 .post {
@@ -75,16 +75,6 @@
   margin-bottom: 30px;
   overflow: hidden;
   width: 90%;
-
-  p {
-    padding: 30px;
-  }
-
-  video {
-    background-color: black;
-    display: block;
-    width: 100%;
-  }
 }
 
 .posts-forms {
@@ -124,6 +114,11 @@
    display: none;
 }
 
+.timestamp {
+  padding: 15px 30px 10px 30px;
+  font-size: 10px;
+}
+
 .tombstone {
   background-repeat: no-repeat;
   background-size: cover;
@@ -143,11 +138,16 @@
    color: #333333;
    font-size: 24px;
    font-family: Andale Mono, monospace;
-   padding: 10px;
 }
 
 .videos-form {
    display: none;
+}
+
+.vid {
+  background-color: black;
+  display: block;
+  width: 100%;
 }
 
 // Masonry CSS ================================================================
