@@ -18,8 +18,14 @@ class MemorialsController < ApplicationController
    end
 
    def create
-      @memorial = current_user.memorials.create(memorial_params)
-      redirect_to memorial_path(@memorial)
+      @memorial = current_user.memorials.build(memorial_params)
+      if @memorial.save
+        redirect_to memorial_path(@memorial)
+      else
+        redirect_to root_url
+        # format.html { render :new }
+        # format.json { render json: @memorial.errors, status: :unprocessable_entity }
+      end
    end
 
    def update
