@@ -2,6 +2,13 @@
   <h1>Remember</h1>
   <div class="row">
     <%= form_for(@memorial) do |f| %>
+    <% if @memorial.errors.any? %>
+    <ul>
+      <% @memorial.errors.full_messages.each do |m| %>
+        <li><%= m %></li>
+      <% end %>
+    </ul>
+    <% end %>
        <div class="field memorial-form-name">
          <%= f.label :first_name %><br>
          <%= f.text_field :first_name, style: "margin-bottom: 10px; width: 200px" %>
