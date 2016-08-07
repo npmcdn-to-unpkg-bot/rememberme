@@ -22,9 +22,7 @@ class MemorialsController < ApplicationController
       if @memorial.save
         redirect_to memorial_path(@memorial)
       else
-        redirect_to root_url
-        # format.html { render :new }
-        # format.json { render json: @memorial.errors, status: :unprocessable_entity }
+        redirect_to :back
       end
    end
 
