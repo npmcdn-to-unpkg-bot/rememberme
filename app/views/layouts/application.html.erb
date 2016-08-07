@@ -40,7 +40,7 @@
                 <li> <%= link_to "Log Out", logout_path %> </li>
                 <li> <%= link_to "Create Memorial", new_memorial_path %> </li>
                 <% if @memorial != nil && @memorial.user == current_user %>
-                    <li><%= link_to "Edit Memorial", edit_memorial_path %></li>
+                    <li><%= link_to "Edit Memorial", edit_memorial_path(current_user, @memorial) %></li>
                 <% end %>
             </ul>
              <% else %>

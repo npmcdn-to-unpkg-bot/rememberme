@@ -22,7 +22,7 @@ class MemorialsController < ApplicationController
       if @memorial.save
         redirect_to memorial_path(@memorial)
       else
-        redirect_to :back
+        render :new
       end
    end
 
