@@ -150,7 +150,7 @@
    $(document).ready(function() {
 
         var pictureUrl = [
-           <% @pics.each do |pic| %>
+           <% @pics.take(5).each do |pic| %>
               <% if pic == @pics.last %>
                  "<%= pic.image.url %>"
               <% else %>
