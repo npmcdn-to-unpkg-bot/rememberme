@@ -1,12 +1,8 @@
 <div class="container">
    <div class="row">
       <% @memorials.each do |m| %>
-      <%= m.full_name %>
-        <% m.posts.each do |post| %>
-          <% if post.postable_type == "Picture" %>
-            <%= image_tag post.postable.image.feed.url %>
-          <% end %> <!-- if post.postable_type == "Picture" -->
-        <% end %> <!-- m.posts.each do |post| -->
+        <%= m.full_name %>
+        <%= image_tag m.first_image %>
       <% end %> <!-- @memorials.each do |m| -->
    </div>
 </div>
