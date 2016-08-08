@@ -1,5 +1,12 @@
 <div class="container">
    <div class="row">
-      <%= image_tag('tree-of-life.jpg', :class => "welcome-image") %>
+      <% @memorials.each do |m| %>
+      <%= m.full_name %>
+        <% m.posts.each do |post| %>
+          <% if post.postable_type == "Picture" %>
+            <%= image_tag post.postable.image.feed.url %>
+          <% end %> <!-- if post.postable_type == "Picture" -->
+        <% end %> <!-- m.posts.each do |post| -->
+      <% end %> <!-- @memorials.each do |m| -->
    </div>
 </div>
