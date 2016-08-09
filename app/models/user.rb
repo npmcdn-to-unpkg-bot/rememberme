@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
         ),
     :message => "must not contain profane language. Users generating profane language will be banned." }
   validates :email, presence: true, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
+  validates :role, :inclusion => { :in => %{ admin } }, :allow_nil => true
 
    def full_name
       "#{first_name} #{last_name}"
