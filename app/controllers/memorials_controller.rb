@@ -36,8 +36,12 @@ class MemorialsController < ApplicationController
    end
 
    def destroy
-      @memorial.destroy
-      redirect_to root_url
+      @memorial = Memorial.friendly.find(params[:id])
+      if @memorial.destroy
+        redirect_to root_url
+      else
+        render :new
+      end
    end
 
    private
