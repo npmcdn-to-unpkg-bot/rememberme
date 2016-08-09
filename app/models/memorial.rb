@@ -35,19 +35,13 @@ class Memorial < ActiveRecord::Base
      :message => "must not contain profane language. Users generating profane language will be banned." }
 
    def first_image
-     if self.posts.any? && self.posts.where(postable_type: "Picture").any?
-       self.posts.where(postable_type: "Picture").collect(&:postable).first.image.url
-     else
-       "thumb_Hydrangeas.jpg"
-     end
+      file = self.posts.find_by(postable_type: "Picture")
+      file ? file.postable.image.url : "thumb_Hydrangeas.jpg"
    end
-   
+
    def first_thumb
-      if self.posts.any? && self.posts.where(postable_type: "Picture").any?
-         self.posts.where(postable_type: "Picture").collect(&:postable).first.image.thumb.url
-      else
-         "thumb_Hydrangeas.jpg"
-      end
+      file = self.posts.find_by(postable_type: "Picture")
+      file ? file.postable.image.thumb.url : "thumb_Hydrangeas.jpg"
    end
 
    def full_name
