@@ -1,3 +1,8 @@
-<div class="form-page">
-  <%= render 'form' %>
-</div>
+<% if @memorial != nil && ( @memorial.user == current_user || current_user.role == "admin" %>
+
+    <div class="form-page">
+      <%= render 'form' %><br>
+      <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+
+<% end %>
