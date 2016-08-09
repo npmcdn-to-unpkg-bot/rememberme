@@ -1,4 +1,4 @@
-<% if @memorial != nil && ( @memorial.user == current_user || current_user.role == "admin" %>
+<% if @memorial != nil && ( @memorial.user == current_user || current_user.role == "admin" ) %>
 
     <div class="form-page">
       <%= render 'form' %><br>
