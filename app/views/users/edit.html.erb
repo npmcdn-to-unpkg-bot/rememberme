@@ -1,4 +1,4 @@
-<% if @user != nil && ( @user == current_user || current_user.role == "admin" ) %>
+<% if current_user != nil && @user != nil && ( @user == current_user || current_user.role == "admin" ) %>
 
     <div class="container-fluid">
         <div class="row">
