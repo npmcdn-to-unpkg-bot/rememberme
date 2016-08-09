@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  get 'admins/show'
 
-  get 'admins/new'
-
-  get 'admins/create'
+  resources :admins
 
   resources :sessions, only: [:new, :create, :destroy]
   get 'signup', to: 'users#new', as: 'signup'
@@ -24,7 +21,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :videos 
+  resources :videos
 
 
 

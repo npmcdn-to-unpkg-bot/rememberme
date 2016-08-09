@@ -1,13 +1,18 @@
 class AdminsController < ApplicationController
+
+  def index
+  end
+
   def show
-    @admin = Admin.find(params[:id])
   end
 
   def new
-    @admin = Admin.new
+  end
+
+  def edit
+    @memorial = Memorial.friendly.find(params[:id])
   end
 
   def create
-    @admin = Admin.new 
   end
 end
