@@ -17,7 +17,9 @@
 <body>
 
    <% if controller.controller_name == "memorials" && controller.action_name == "show" %>
-   <nav class="navbar navbar-default navbar-memorial">
+     <nav class="navbar navbar-default navbar-memorial">
+   <% elsif controller.controller_name == "welcome" && controller.action_name == "index" %>
+     <nav id="navbar-welcome" class="navbar navbar-default">
    <% else %>
    <nav class="navbar navbar-default">
    <% end %>
@@ -57,7 +59,7 @@
 
        </div>
      </div>
-   </nav>
+  </nav>
 
 
 <%= yield %>

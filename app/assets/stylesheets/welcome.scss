@@ -1,9 +1,25 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.welcome-image {
-   display: block;
-   margin: auto;
-   height: 100%;
-   width: 100%;
+#navbar-welcome {
+  background: none;
+  border: none;
+  position:absolute;
+  width: 100%;
+
+  div a {
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 0 50px white;
+  }
+
+  ul li {
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 0 30px white;
+  }
+}
+
+@media (max-width: 765px) {
+  #navbar-welcome {
+    background: linear-gradient(to bottom, #f8f8f8, gray);
+    border: 1px solid #f8f8f8;
+  }
 }
