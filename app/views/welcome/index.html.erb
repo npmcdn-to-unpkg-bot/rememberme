@@ -1,8 +1,72 @@
 <div class="container">
    <div class="row">
-      <% @memorials.each do |m| %>
-        <%= m.full_name %>
-        <%= image_tag m.first_image %>
-      <% end %> <!-- @memorials.each do |m| -->
+
+     <div class="row epitaph">
+        <div class="col-xs-12">
+              <h1 id="epitaph-name"></h1>
+              <h2 id="epitaph-date"></h2>
+        </div>
+     </div>
+
+     <div class="tombstone">
+
+     </div>
+
    </div>
 </div>
+
+<script>
+
+  $(document).ready(function() {
+
+    var pictureUrl = [
+      <% @memorials.each do |m| %>
+        <% if m == @memorials.last %>
+          "<%= m.first_image %>"
+        <% else %>
+          "<%= m.first_image %>",
+        <% end %>
+      <% end %>
+    ];
+
+    var epitaphName = [
+      <% @memorials.each do |m| %>
+        <% if m == @memorials.last %>
+          "<%= m.full_name %>"
+        <% else %>
+          "<%= m.full_name %>",
+        <% end %>
+      <% end %>
+    ];
+
+    var epitaphDate = [
+      <% @memorials.each do |m| %>
+        <% if m == @memorials.last %>
+          "<%= m.dob.year %> - <%= m.dod.year %>"
+        <% else %>
+          "<%= m.dob.year %> - <%= m.dod.year %>",
+        <% end %>
+      <% end %>
+    ];
+
+    $("#epitaph-name").html( "" + epitaphName[0] + "" );
+    $("#epitaph-date").html( "" + epitaphDate[0] + "" );
+    $(".tombstone").css("background-image", "url(" + pictureUrl[0] + ")");
+    var length = pictureUrl.length
+    var i = length - 1
+    setInterval(function() {
+       if (i == 0) {
+          $("#epitaph-name").html( "" + epitaphName[i] + "" );
+          $("#epitaph-date").html( "" + epitaphDate[i] + "" );
+          $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
+          i = length - 1
+       } else {
+          $("#epitaph-name").html( "" + epitaphName[i] + "" );
+          $("#epitaph-date").html( "" + epitaphDate[i] + "" );
+          $(".tombstone").css("background-image", "url(" + pictureUrl[i] + ")");
+          i = i - 1
+       };
+    }, 4000);
+
+  }); // Document Ready
+</script>
