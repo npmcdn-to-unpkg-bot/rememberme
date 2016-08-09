@@ -64,6 +64,13 @@ nav {
    width: 100%;
 }
 
+#navbar-toggle {
+  border: 1px solid black;
+  span {
+    border: 1px solid black;
+  }
+}
+
 a.rails-link:hover {
   background-color: transparent;
 }
