@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'admins/show'
+
+  get 'admins/new'
+
+  get 'admins/create'
+
   resources :sessions, only: [:new, :create, :destroy]
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
