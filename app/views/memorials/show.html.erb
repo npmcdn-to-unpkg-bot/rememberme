@@ -96,7 +96,7 @@
 
 <div class="masonry-container posts">
    <div class="grid">
-      <% @memorial.posts.each do |post| %>
+      <% @memorial.posts.reverse.each do |post| %>
          <% if post.postable_type == "Text" %>
             <div class="grid-sizer"></div>
             <div class="grid-item">
@@ -150,7 +150,7 @@
    $(document).ready(function() {
 
         var pictureUrl = [
-           <% @pics.take(5).each do |pic| %>
+           <% @pics.last(5).each do |pic| %>
               <% if pic == @pics.last %>
                  "<%= pic.image.url %>"
               <% else %>

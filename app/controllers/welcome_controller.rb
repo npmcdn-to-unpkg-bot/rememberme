@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @memorials = Memorial.take(5)
+    @memorials = Memorial.last(5)
   end
 
 end
