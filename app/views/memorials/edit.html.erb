@@ -2,7 +2,7 @@
 
     <div class="form-page">
       <%= render 'form' %><br>
-      <%= link_to 'Destroy', @memorial, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <button class="btn-delete"><%= link_to 'Destroy', @memorial, method: :delete, data: { confirm: 'Are you sure?' } %></button>
     </div>
 
 <% end %>

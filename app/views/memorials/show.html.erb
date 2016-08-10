@@ -113,7 +113,7 @@
               <div class="post">
                    <%= image_tag post.postable.image.feed.url, :class => "pic" %>
                    <div>
-                     <% unless post.postable.body == nil %>
+                     <% unless post.postable.body == nil || post.postable.body.empty? == false %>
                       <p class="body"><%= post.postable.body %></p>
                      <% end %>
                    </div>
@@ -128,7 +128,7 @@
               <div class="post">
                    <%= video_tag post.postable.video_file.url, controls: true, :class => "vid" %>
                    <div>
-                     <% unless post.postable.body == nil %>
+                     <% unless post.postable.body == nil || post.postable.body.empty? == false %>
                       <p class="body"><%= post.postable.body %></p>
                      <% end %>
                    </div>
