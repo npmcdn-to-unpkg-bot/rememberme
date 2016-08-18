@@ -1,6 +1,4 @@
-<div class="container">
-  <h1>Remember</h1>
-  <div class="row">
+<!-- Style in forms.scss -->
     <%= form_for(@memorial) do |f| %>
     <% if @memorial.errors.any? %>
     <ul>
@@ -9,29 +7,17 @@
       <% end %>
     </ul>
     <% end %>
-       <div class="field memorial-form-name">
-         <%= f.label :first_name %><br>
-         <%= f.text_field :first_name, style: "margin-bottom: 10px; width: 200px" %>
-       </div><br class="memorial-form-break">
-       <div class="field memorial-form-name">
-         <%= f.label :last_name %><br>
-         <%= f.text_field :last_name, style: "width: 200px" %>
-       </div><br>
-       <div class="field">
+         <%= f.label :first_name %>
+         <%= f.text_field :first_name, class: "form-field", placeholder: "First Name" %><br>
+         <%= f.label :last_name %>
+         <%= f.text_field :last_name, class: "form-field", placeholder: "Last Name" %><br>
+         <%= f.label :bio, "Biography" %>
+         <%= f.text_area :bio, class: "form-field", placeholder: "Biography" %><br>
+
           <%= f.label :dob, "Date of Birth" %><br>
-          <%= f.date_select :dob, options = {start_year: 1500}, class: "memorial-form-date" %>
-       </div>
-       <div class="field">
+          <%= f.date_select :dob, options = {start_year: 1500}, class: "form-field" %><br>
           <%= f.label :dod, "Date of Passing" %><br>
-          <%= f.date_select :dod, options = {start_year: 1500}, class: "memorial-form-date" %>
-       </div>
-       <div class="field">
-          <%= f.label :bio, "Biography"%><br>
-          <%= f.text_field :bio, class: "memorial-form-bio" %>
-       </div>
-       <div class="actions">
-         <%= f.submit %>
-       </div>
+          <%= f.date_select :dod, options = {start_year: 1500}, class: "form-field" %><br>
+
+         <%= f.submit "Save Memorial", class: "form-field btn-save" %>
     <% end %>
-  </div>
-</div>

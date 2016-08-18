@@ -11,27 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <!-- Style in forms.scss -->
+    <%= f.text_field :first_name, class: "form-field", placeholder: "First Name" %><br>
+    <%= f.text_field :last_name, class: "form-field", placeholder: "Last Name" %><br>
+    <%= f.text_field :email, class: "form-field", placeholder: "E-Mail" %><br>
+    <%= f.password_field :password, class: "form-field", placeholder: "Password" %><br>
+    <%= f.password_field :password_confirmation, class: "form-field", placeholder: "Confirm Password" %><br>
+    <%= f.submit "Save Profile", class: "form-field btn-save" %>
 <% end %>

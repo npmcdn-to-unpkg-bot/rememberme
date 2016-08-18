@@ -1,14 +1,11 @@
 <% if current_user != nil && @user != nil && ( @user == current_user || current_user.role == "admin" ) %>
 
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-3 col-xs-offset-2 col-sm-offset-5">
-               <h1 class="display-3">Edit Profile</h1>
+          <!-- Style in forms.scss -->
+          <div class="form-page">
+               <h1>Edit Profile</h1>
                <%= render 'form' %>
+               <button class="btn-delete form-field"><%= link_to 'Delete Profile', @user, method: :delete, data: { confirm: 'Are you sure?' } %></button>
             </div>
-         </div>
-     </div>
 
-      <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <% end %>

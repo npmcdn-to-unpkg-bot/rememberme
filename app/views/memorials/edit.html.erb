@@ -1,8 +1,9 @@
 <% if current_user != nil && @memorial != nil && ( @memorial.user == current_user || current_user.role == "admin" ) %>
 
     <div class="form-page">
+      <h1>Edit Memorial</h1>
       <%= render 'form' %><br>
-      <button class="btn-delete"><%= link_to 'Destroy', @memorial, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      <button class="btn-delete form-field"><%= link_to 'Delete Memorial', @memorial, method: :delete, data: { confirm: 'Are you sure?' } %></button>
     </div>
 
 <% end %>
