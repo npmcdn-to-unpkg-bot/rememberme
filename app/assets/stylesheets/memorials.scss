@@ -17,6 +17,24 @@
   font-size: 16px;
 }
 
+.edit-post {
+  margin-left: 3px;
+}
+
+.edit-post-button {
+  background-color: #f8f8f8;
+  border: none;
+
+  a:link{background-color: inherit; color:inherit}
+  a:active{background-color: inherit; color:inherit}
+  a:visited{background-color: inherit; color:inherit}
+  a:hover{background-color: inherit; color:inherit}
+}
+
+.edit-post:hover {
+  cursor: pointer;
+}
+
 .epitaph {
       align-items: center;
       color: black;
@@ -122,8 +140,8 @@
 .timestamp {
   // background-color: #d3d3d3;
   // background-color: white;
-  padding: 15px 30px 10px 30px;
   font-size: 10px;
+  padding: 15px 30px 10px 30px;
 }
 
 .tombstone {

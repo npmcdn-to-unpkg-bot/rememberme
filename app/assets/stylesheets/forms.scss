@@ -41,6 +41,10 @@ button:focus {
       h1 {text-align: center; width: 350px;}
 }
 
+a.rails-link {
+  background-color: none;
+}
+
 a.rails-link:hover {
   background-color: transparent;
 }
