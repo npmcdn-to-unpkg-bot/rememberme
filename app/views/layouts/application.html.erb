@@ -43,7 +43,7 @@
                 <li> <%= link_to "Create Memorial", new_memorial_path %> </li>
                 <% if @memorial != nil && @memorial.user == current_user %>
                     <li><%= link_to "Edit Memorial", edit_memorial_path(@memorial) %></li>
-                <% elsif @memorial != nil && current_user.role == "admin" %>
+                <% elsif @memorial != nil && @memorial.id != nil && current_user.role == "admin" %>
                     <li><%= link_to "Edit Memorial", edit_memorial_path(@memorial) %></li>
                 <% end %>
             </ul>
