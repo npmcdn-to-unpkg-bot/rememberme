@@ -3,6 +3,10 @@ class TextsController < ApplicationController
       @text = Text.new
    end
 
+   def edit
+     @text = Text.find(params[:id])
+   end
+
    def create
       @text = Text.new(text_params)
       if @text.save

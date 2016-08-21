@@ -87,6 +87,8 @@
           </div>
        <% end %>
 
+
+
        </div>
      </div>
    </div>
@@ -103,7 +105,7 @@
                    <p class="body"><%= post.postable.try(:body) %></p>
                  </div>
                  <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
-                 <% if post.user == current_user || current_user.role == 'admin' %>
+                 <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
                    <button class="edit-post-button edit-texts-button" data-toggle="modal" data-target="#myModal">
                      <span class="glyphicon glyphicon-pencil edit-post" aria-hidden="true"><%= link_to "Edit", edit_text_path, class: "rails-link" %></span>
                    </button>
@@ -123,7 +125,7 @@
                      <% end %>
                    </div>
                    <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}"%></p>
-                   <% if post.user == current_user || current_user.role == 'admin' %>
+                   <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
                      <button class="edit-post-button edit-picture-button" data-toggle="modal" data-target="#myModal">
                        <span class="glyphicon glyphicon-pencil edit-post" aria-hidden="true"><%= link_to "Edit", edit_text_path, class: "rails-link" %></span>
                      </button>
@@ -143,7 +145,7 @@
                      <% end %>
                    </div>
                    <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
-                   <% if post.user == current_user || current_user.role == 'admin' %>
+                   <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
                      <button class="edit-post-button edit-video-button" data-toggle="modal" data-target="#myModal">
                        <span class="glyphicon glyphicon-pencil edit-post" aria-hidden="true"><%= link_to "Edit", edit_text_path, class: "rails-link" %></span>
                      </button>
