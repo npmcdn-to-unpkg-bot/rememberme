@@ -40,7 +40,7 @@
      <div class="modal-dialog" role="document">
        <div class="modal-content">
 
-         <!-- <%= form_for :text, url: texts_path do |f| %>
+         <%= form_for :text, url: texts_path do |f| %>
             <div class="modal-header texts-form">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="myModalLabel">Write a Message</h4>
@@ -87,8 +87,6 @@
           </div>
        <% end %>
 
-       <%= render 'modal' %> -->
-
 
        </div>
      </div>
@@ -108,7 +106,7 @@
                  <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
                  <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
                    <button class="edit-post-button edit-texts-button" data-toggle="modal" data-target="#myModal">
-                     <span class="glyphicon glyphicon-pencil edit-post" aria-hidden="true"><%= link_to "Edit", edit_text_path(post.postable), remote: true, class: "rails-link" %></span>
+                     <%= link_to "Edit", edit_text_path(post.postable), remote: true, class: "rails-link" %></span>
                    </button>
                  <% end %>
               </div>
@@ -128,7 +126,7 @@
                    <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}"%></p>
                    <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
                      <button class="edit-post-button edit-picture-button" data-toggle="modal" data-target="#myModal">
-                       <span class="glyphicon glyphicon-pencil edit-post" aria-hidden="true"><%= link_to "Edit", edit_text_path, class: "rails-link" %></span>
+                       <%= link_to "Edit", edit_picture_path(post.postable), class: "rails-link" %></span>
                      </button>
                    <% end %>
               </div>
@@ -148,7 +146,7 @@
                    <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
                    <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
                      <button class="edit-post-button edit-video-button" data-toggle="modal" data-target="#myModal">
-                       <span class="glyphicon glyphicon-pencil edit-post" aria-hidden="true"><%= link_to "Edit", edit_text_path, class: "rails-link" %></span>
+                       <%= link_to "Edit", edit_video_path(post.postable), class: "rails-link" %></span>
                      </button>
                    <% end %>
               </div>
