@@ -1,0 +1,7 @@
+
+<% unless @text == nil %>
+  <%= form_for(@text, remote: true) do |f| %>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  <% end %>
+<% end %>

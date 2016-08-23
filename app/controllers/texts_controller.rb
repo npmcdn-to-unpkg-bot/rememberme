@@ -17,6 +17,13 @@ class TextsController < ApplicationController
       redirect_to :back
    end
 
+   def update
+     @text = Text.find(params[:id])
+     if @text.update(text_params)
+       redirect_to :back
+     end
+   end
+
    private
       def text_params
          params.require(:text).permit(:body)
