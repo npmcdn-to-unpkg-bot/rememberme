@@ -1,0 +1,2 @@
+$('.modal-content').html("<%= escape_javascript(render partial: 'texts/form', locals: { text: @text, memorial_id: @memorial_id }) %>")
+$('#myModal').modal('show');

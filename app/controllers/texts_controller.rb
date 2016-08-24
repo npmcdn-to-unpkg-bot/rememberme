@@ -1,6 +1,7 @@
 class TextsController < ApplicationController
    def new
       @text = Text.new
+      @memorial_id = params[:memorial_id]
    end
 
    def edit
