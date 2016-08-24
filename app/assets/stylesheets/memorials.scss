@@ -168,7 +168,10 @@
 
 .vid {
   background-color: black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   display: block;
+  overflow: hidden;
   width: 100%;
 }
 
