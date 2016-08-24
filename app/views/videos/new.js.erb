@@ -1,0 +1,2 @@
+$('.modal-content').html("<%= escape_javascript( render partial: 'videos/form', locals: { video: @video, memorial_id: @memorial_id }) %>")
+$('#myModal').modal('show');

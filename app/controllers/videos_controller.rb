@@ -5,6 +5,7 @@ class VideosController < ApplicationController
 
    def new
       @video = Video.new
+      @memorial_id = params[:memorial_id]
    end
 
    def edit
@@ -19,6 +20,13 @@ class VideosController < ApplicationController
          flash[:alert] = "Video failed to save"
       end
       redirect_to :back
+   end
+
+   def update
+     @video = Video.find(params[:id])
+     if @video.update(video_params)
+       redirect_to :back
+     end
    end
 
    private

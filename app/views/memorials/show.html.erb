@@ -26,36 +26,19 @@
               <!-- <button class="posts-form-button pictures-button" data-toggle="modal" data-target="#myModal"> -->
                 <span class="glyphicon glyphicon-picture" aria-hidden="true"></span><%= link_to "Picture", new_picture_path( memorial_id: @memorial.id ), remote: true, class: "rails-link" %>
               <!-- </button> -->
-              <button class="posts-form-button videos-button" data-toggle="modal" data-target="#myModal">
-                <span class="glyphicon glyphicon-film" aria-hidden="true"></span> Video
-              </button>
+              <!-- <button class="posts-form-button videos-button" data-toggle="modal" data-target="#myModal"> -->
+                <span class="glyphicon glyphicon-film" aria-hidden="true"></span><%= link_to "Video", new_video_path( memorial_id: @memorial.id ), remote: true, class: "rails-link" %>
+              <!-- </button> -->
         <% else %>
               <button class="posts-form-button"><%= link_to "Sign Up", signup_path, class: "rails-link" %></button>
               <button class="posts-form-button"><%= link_to "Log In", login_path, class: "rails-link" %></button>
         <% end %>
    </div>
 
-   <!-- Modal -->
+   <!-- Modal For Posts -->
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
      <div class="modal-dialog" role="document">
        <div class="modal-content">
-
-        <%= form_for Video.new do |f| %>
-           <div class="modal-header videos-form">
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-             <h4 class="modal-title" id="myModalLabel">Share a Video</h4>
-           </div>
-           <div class="modal-body videos-form">
-                <p><%= f.file_field :video_file %></p>
-                <p><%= f.text_area :body %></p>
-                <p><%= f.hidden_field :memorial_id, value: @memorial.id %></p>
-           </div>
-           <div class="modal-footer videos-form">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <%= f.submit "Share Video", class: "btn btn-primary"%>
-          </div>
-       <% end %>
-
 
        </div>
      </div>
@@ -115,7 +98,7 @@
                    <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
                    <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
                      <button class="edit-post-button edit-video-button" data-toggle="modal" data-target="#myModal">
-                       <%= link_to "Edit", edit_video_path(post.postable), class: "rails-link" %></span>
+                       <%= link_to "Edit", edit_video_path(post.postable), remote: true, class: "rails-link" %></span>
                      </button>
                    <% end %>
               </div>
