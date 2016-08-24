@@ -5,6 +5,11 @@ class PicturesController < ApplicationController
 
    def new
       @picture = Picture.new
+      @memorial_id = params[:memorial_id]
+   end
+
+   def edit
+     @picture = Picture.find(params[:id])
    end
 
    def create
@@ -15,6 +20,13 @@ class PicturesController < ApplicationController
          flash[:alert] = "Nay"
       end
       redirect_to :back
+   end
+
+   def update
+     @picture = Picture.find(params[:id])
+     if @picture.update(picture_params)
+       redirect_to :back
+     end
    end
 
    private
