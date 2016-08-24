@@ -41,7 +41,7 @@
                 <li> <%= link_to "Edit Profile", edit_user_path(current_user) %> </li>
                 <li> <%= link_to "Log Out", logout_path %> </li>
                 <li> <%= link_to "Create Memorial", new_memorial_path %> </li>
-                <% if @memorial != nil && @memorial.id != nil && (@memorial.user == current_user || current_user.role == 'admin') %>
+                <% if edit_memorial(current_user, @memorial) %>
                     <li><%= link_to "Edit Memorial", edit_memorial_path(@memorial) %></li>
                 <% end %>
             </ul>
