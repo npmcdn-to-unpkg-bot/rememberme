@@ -25,6 +25,12 @@ class TextsController < ApplicationController
      end
    end
 
+   def destroy
+     @text = Text.find(params[:id])
+     @text.destroy
+     redirect_to :back
+   end 
+
    private
       def text_params
          params.require(:text).permit(:body)

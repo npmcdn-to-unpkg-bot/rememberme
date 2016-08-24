@@ -1,17 +1,33 @@
 <%= form_for video do |f| %>
-   <div class="modal-header">
-     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-     <h4 class="modal-title" id="myModalLabel">Share a Video</h4>
-   </div>
-   <div class="modal-body">
-        <p><%= f.file_field :video_file %></p>
-        <p><%= f.text_area :body %></p>
-        <% if controller.action_name == 'new' %>
-            <%= f.hidden_field :memorial_id, value: memorial_id %>
-        <% end %>
-   </div>
-   <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= f.submit "Share Video", class: "btn btn-primary"%>
-  </div>
+  <% if controller.action_name == 'new' %>
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Share a Video</h4>
+     </div>
+     <div class="modal-body">
+          <p><%= f.file_field :video_file %></p>
+          <p><%= f.text_area :body %></p>
+          <%= f.hidden_field :memorial_id, value: memorial_id %>
+     </div>
+     <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit "Share Video", class: "btn btn-primary btn-save", style: "background-color: lightgreen; color: black;"%></button>
+    </div>
+
+  <% elsif controller.action_name == 'edit' %>
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="myModalLabel">Edit Post</h4>
+    </div>
+    <div class="modal-body">
+         <p><%= f.file_field :video_file %></p>
+         <p><%= f.text_area :body %></p>
+    </div>
+    <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         <%= f.submit "Save", class: "btn btn-primary btn-save", style: "background-color: lightgreen; color: black;"%>
+         <%= link_to "Delete", video, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary", style: "background-color: pink; color: black;"%>
+    </div>
+
+  <% end %>
 <% end %>

@@ -57,7 +57,7 @@
                  </div>
                  <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
                  <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
-                   <button class="edit-post-button" data-toggle="modal" data-target="#myModal">
+                   <button class="edit-post-button">
                      <%= link_to "Edit", edit_text_path(post.postable), remote: true, class: "rails-link" %></span>
                    </button>
                  <% end %>
@@ -77,7 +77,7 @@
                    </div>
                    <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}"%></p>
                    <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
-                     <button class="edit-post-button" data-toggle="modal" data-target="#myModal">
+                     <button class="edit-post-button">
                        <%= link_to "Edit", edit_picture_path(post.postable), remote: true, class: "rails-link" %></span>
                      </button>
                    <% end %>
@@ -97,7 +97,7 @@
                    </div>
                    <p class="timestamp"><%= "Posted by: #{post.user.full_name} on #{post.created_at.strftime("%m-%d-%Y")}" %></p>
                    <% if current_user != nil && (post.user == current_user || current_user.role == 'admin') %>
-                     <button class="edit-post-button" data-toggle="modal" data-target="#myModal">
+                     <button class="edit-post-button">
                        <%= link_to "Edit", edit_video_path(post.postable), remote: true, class: "rails-link" %></span>
                      </button>
                    <% end %>
