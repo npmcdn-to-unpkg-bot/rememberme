@@ -20,8 +20,8 @@
 
   a:link{background-color: inherit; color:inherit}
   a:active{background-color: inherit; color:inherit}
-  a:visited{background-color: inherit; color:inherit}
   a:hover{background-color: inherit; color:inherit}
+  a:visited{background-color: inherit; color:inherit}
 }
 
 button:focus {
@@ -41,10 +41,7 @@ button:focus {
       h1 {text-align: center; width: 350px;}
 }
 
-a.rails-link {
-  background-color: none;
-}
-
-a.rails-link:hover {
-  background-color: transparent;
-}
+a.rails-link {background-color: none;}
+a.rails-link:active{background-color: inherit; color:inherit}
+a.rails-link:hover {background-color: transparent;}
+a.rails-link:visited{background-color: inherit; color:inherit}
