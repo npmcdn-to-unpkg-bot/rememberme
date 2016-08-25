@@ -1,4 +1,6 @@
-<div class="form-page">
-  <h1>Create Memorial</h1>
-  <%= render 'form' %>
-</div>
+<% if current_user %>
+  <div class="form-page">
+    <h1>Create Memorial</h1>
+    <%= render 'form' %>
+  </div>
+<% end %>
